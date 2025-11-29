@@ -58,7 +58,7 @@ export default function About() {
           </div>
 
           <div className="mt-12">
-            <button className="bg-brand-gold text-white px-8 py-3 rounded-md font-bold hover:bg-brand-gold-hover transition-colors">
+            <button className="bg-brand-gold text-white px-8 py-3 rounded-md font-bold hover:bg-brand-gold transition-colors">
               Contact US
             </button>
           </div>

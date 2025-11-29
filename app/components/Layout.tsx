@@ -61,7 +61,7 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:block bg-brand-navy text-white px-6 py-2 text-sm font-medium hover:bg-brand-navy-hover transition-colors rounded-sm">
+            <button className="hidden md:block bg-brand-navy text-white px-6 py-2 text-sm font-medium hover:bg-brand-navy transition-colors rounded-sm">
               Catalogue
             </button>
             <button className="w-8 h-8 flex items-center justify-center text-brand-gold">
