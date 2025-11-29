@@ -1,17 +1,19 @@
 import React from "react";
 import { Link, useLocation } from "react-router";
 import { clsx } from "clsx";
+import { useTranslation } from "react-i18next";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const { t } = useTranslation();
   const location = useLocation();
   const navItems = [
-    { path: "/about", label: "About" },
-    { path: "/machines", label: "Machines" },
-    { path: "/contact", label: "Contact" },
+    { path: "/about", label: t("nav.about") },
+    { path: "/machines", label: t("nav.machines") },
+    { path: "/contact", label: t("nav.contact") },
   ];
 
   // Check if any of the nav items are currently active
@@ -61,8 +63,8 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:block bg-brand-navy text-white px-6 py-2 text-sm font-medium hover:bg-brand-navy transition-colors rounded-sm">
-              Catalogue
+            <button className="hidden md:block bg-brand-navy text-white px-6 py-2 text-sm font-medium hover:bg-brand-navy-hover transition-colors rounded-sm">
+              {t("nav.catalogue")}
             </button>
             <button className="w-8 h-8 flex items-center justify-center text-brand-gold">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

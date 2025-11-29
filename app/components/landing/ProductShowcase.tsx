@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const products = [
   { id: "M-350", name: "M-350", sub: "", imageColor: "bg-gray-300" },
@@ -7,6 +8,7 @@ const products = [
 ];
 
 export default function ProductShowcase() {
+  const { t } = useTranslation();
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,7 +32,7 @@ export default function ProductShowcase() {
                   <p className="text-xl text-gray-300 font-medium mb-4">{product.sub}</p>
                 )}
                 <button className="bg-primary-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-600 transition-colors flex items-center gap-2">
-                  더 알아보기
+                  {t("products.more")}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

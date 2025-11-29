@@ -1,7 +1,9 @@
 
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col w-full">
       {/* Top Section: Main Banner / Slider */}
@@ -14,8 +16,8 @@ export default function Hero() {
         {/* Overlay Content (Top Left Logo) */}
         <div className="absolute top-12 left-12 md:top-20 md:left-20">
           <div className="bg-secondary-800/80 backdrop-blur-sm p-6 rounded-sm inline-block text-white">
-            <h1 className="text-3xl md:text-4xl font-bold uppercase tracking-wider">Korion</h1>
-            <p className="text-lg md:text-xl font-light mt-1">Agricultural Machinery</p>
+            <h1 className="text-3xl md:text-4xl font-bold uppercase tracking-wider">{t("hero.title")}</h1>
+            <p className="text-lg md:text-xl font-light mt-1">{t("hero.subtitle")}</p>
           </div>
         </div>
 
@@ -41,10 +43,10 @@ export default function Hero() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-5xl md:text-6xl font-bold text-brand-navy mb-2 tracking-tight">Korion</h2>
-          <p className="text-2xl md:text-3xl text-brand-blue-light font-medium mb-8">Agricultural Machinery</p>
+          <h2 className="text-5xl md:text-6xl font-bold text-brand-navy mb-2 tracking-tight">{t("hero.title")}</h2>
+          <p className="text-2xl md:text-3xl text-brand-blue-light font-medium mb-8">{t("hero.subtitle")}</p>
           <p className="text-lg md:text-xl text-gray-600 font-medium tracking-wide break-keep">
-            더 나은 품질, 더 적은 손실, 그리고 절대적인 안전
+            {t("hero.slogan")}
           </p>
         </div>
       </section>

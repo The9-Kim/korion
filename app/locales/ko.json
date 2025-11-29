@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "about": "About",
+    "machines": "Machines",
+    "contact": "Contact",
+    "catalogue": "Catalogue"
+  },
+  "hero": {
+    "title": "Korion",
+    "subtitle": "Agricultural Machinery",
+    "slogan": "더 나은 품질, 더 적은 손실, 그리고 절대적인 안전"
+  },
+  "features": {
+    "badge": "Best Item",
+    "title": "정밀한 수확, 강력한 성능",
+    "subtitle": "KORION M-Series 포리지 하베스터",
+    "items": {
+      "1": { "title": "Check Point.01", "desc": "줄 독립형 트랙터 장착 사료 수확기" },
+      "2": { "title": "Check Point.02", "desc": "풀 수거 시스템" },
+      "3": { "title": "Check Point.03", "desc": "회전식 흡입 헤더" },
+      "4": { "title": "Check Point.04", "desc": "험난한 지형을 위한 보조 바퀴" },
+      "5": { "title": "Check Point.05", "desc": "4x4 트랜스미션 및 2가지 유형의 기어박스" },
+      "6": { "title": "Check Point.06", "desc": "Kemper 헤더를 제외한 크라운 자체 제조 부품" }
+    }
+  },
+  "products": {
+    "more": "더 알아보기"
+  },
+  "about": {
+    "title": "지역을 위한 기술, 세계 수준의 성능",
+    "desc1": "코리온(KORION)은 한국 최대 농업 지역에 기반을 둔 한국 농업 기계 기업으로,<br />아시아 농민들의 고유한 요구를 충족시키는 데 전념하고 있습니다.",
+    "desc2": "우리의 임무는 간단합니다: 안전을 최우선으로 생각하며,<br />초고품질 장비를 사용하여 농작물 품질을 높이고 손실을 줄이는 것입니다.",
+    "desc3": "대부분 광활하고 평평한 밭에 최적화된 유럽산 수입 모델과는 달리,<br />저희의 R&D 및 제조 공정은 아시아의 니즈에 특화된 지형 적응성과 기동성에 중점을 두고 있습니다.",
+    "desc4": "저희는 특수 트랙터 장착형 수확기 생산과 함께,<br />BVL 믹서, Fliegl 살포기, Kemper 헤더, Dondi 배수로 굴착기 및 경운기 등<br />세계 최고의 장비를 수입하여 맞춤형 솔루션을 제공합니다.",
+    "desc5": "코리온의 장비는 아시아의 밭에 맞게 한국에서 설계됩니다.<br />우리는 현지 성공에 최적화된 세계적 수준의 장비를 위한 파트너입니다.",
+    "contactBtn": "Contact US"
+  },
+  "contact": {
+    "email": "이메일 :",
+    "phone": "전화 :",
+    "mobile": "휴대폰 & WhatsApp :",
+    "fax": "팩스 :",
+    "address": "주소 :",
+    "serviceTitle": "서비스 안내",
+    "serviceDesc": "A/S 예약을 원하시면 코리온으로 직접 문의해 주세요.<br />장비 점검 일정은 확인 후 안내드립니다."
+  }
+}
