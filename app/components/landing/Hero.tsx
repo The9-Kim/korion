@@ -41,8 +41,8 @@ export default function Hero() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-5xl md:text-6xl font-bold text-[#1e2b4a] mb-2 tracking-tight">Korion</h2>
-          <p className="text-2xl md:text-3xl text-[#8faadd] font-medium mb-8">Agricultural Machinery</p>
+          <h2 className="text-5xl md:text-6xl font-bold text-brand-navy-dark mb-2 tracking-tight">Korion</h2>
+          <p className="text-2xl md:text-3xl text-brand-blue-lighter font-medium mb-8">Agricultural Machinery</p>
           <p className="text-lg md:text-xl text-gray-600 font-medium tracking-wide break-keep">
             더 나은 품질, 더 적은 손실, 그리고 절대적인 안전
           </p>
