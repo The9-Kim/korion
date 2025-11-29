@@ -1,13 +1,22 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import Layout from "../components/Layout";
+import Hero from "../components/landing/Hero";
+import Features from "../components/landing/Features";
+import ProductShowcase from "../components/landing/ProductShowcase";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Korion - Agricultural Machinery" },
+    { name: "description", content: "Korion Agricultural Machinery - Precision Harvesting, Powerful Performance" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <Layout>
+      <Hero />
+      <Features />
+      <ProductShowcase />
+    </Layout>
+  );
 }
