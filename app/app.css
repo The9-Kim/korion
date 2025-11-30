@@ -3,6 +3,8 @@
 @theme {
   --font-sans: "Inter", "Pretendard", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-aldrich: "Aldrich", sans-serif;
+  --font-gothic: "Nanum Gothic", sans-serif;
 
   /* Brand Colors */
   --color-brand-gold: #C6A268;

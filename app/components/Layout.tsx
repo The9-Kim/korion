@@ -20,7 +20,7 @@ export default function Layout({ children }: LayoutProps) {
   const isAnyNavActive = navItems.some(item => location.pathname === item.path);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-secondary-900 font-sans">
+    <div className="min-h-screen flex flex-col bg-white text-secondary-900 font-aldrich">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
