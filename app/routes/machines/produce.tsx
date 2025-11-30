@@ -9,22 +9,22 @@ export default function Produce() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
       {/* Intro Section */}
-      <div className="text-center mb-20">
-        <span className="text-sm  text-gray-500 mb-2 block">{t("machines.produce.intro.badge")}</span>
-        <h2 className="text-3xl md:text-4xl  text-brand-navy mb-8">{t("machines.produce.intro.title")}</h2>
-        <div className="w-16 h-[2px] bg-brand-gold mx-auto mb-8" />
+      <div className="text-center mb-36">
+        <span className="text-[30px] font-gothic text-dark-gray mb-2 block tracking-tighter">{t("machines.produce.intro.badge")}</span>
+        <h2 className="text-[45px] font-gothic font-bold text-brand-navy mb-8">{t("machines.produce.intro.title")}</h2>
+        <div className="w-40 h-[2px] bg-brand-gold-light mx-auto my-16" />
 
-        <div className="max-w-3xl mx-auto text-gray-600 space-y-4 break-keep">
+        <div className="mx-auto text-brand-navy break-keep text-[25px]/[50px] tracking-tight">
           <p>
             <Trans i18nKey="machines.produce.intro.desc1" components={{ br: <br /> }} />
           </p>
         </div>
 
-        <div className="mt-12 mb-20">
-          <span className="text-4xl  text-brand-gold uppercase tracking-widest opacity-30">{t("machines.hero.title")}</span>
+        <div className="flex items-center justify-center mt-24 mb-20">
+          <img src="/images/logo.png" alt="Korion" className="h-5 md:h-6 w-auto" />
         </div>
 
-        <div className="max-w-3xl mx-auto text-gray-600 space-y-2 text-sm break-keep">
+        <div className="mx-auto text-brand-navy break-keep text-[25px]/[50px] tracking-tight">
           <p>
             <Trans i18nKey="machines.produce.intro.desc2" components={{ br: <br /> }} />
           </p>
@@ -44,7 +44,7 @@ export default function Produce() {
           { id: 5, title: t("machines.produce.checkpoints.5.title"), sub: t("machines.produce.checkpoints.5.sub"), img: "/images/produce/produce-5.png" },
           { id: 6, title: t("machines.produce.checkpoints.6.title"), sub: t("machines.produce.checkpoints.6.sub"), img: "/images/produce/produce-6.png" },
         ].map((item) => (
-          <div key={item.id} className="relative w-full aspect-316/408 overflow-hidden shadow-2xl group rounded-tr-[40px]">
+          <div key={item.id} className="relative w-full aspect-316/408 overflow-hidden shadow-md/30 group rounded-tr-[40px]">
             {/* Background Image */}
             <div className="absolute inset-0">
               <img src={item.img} alt={item.title} className="w-full h-full object-contain transition-transform duration-500" />
@@ -52,17 +52,17 @@ export default function Produce() {
 
             {/* Top Content: Check Point */}
             <div className="absolute top-8 left-8 z-10">
-              <div className="text-brand-gold-light text-[40px] leading-none drop-shadow-md">Check</div>
-              <div className="text-brand-gold-light text-[40px] leading-none drop-shadow-md">Point .0{item.id}</div>
+              <div className="text-brand-gold-light text-[30px] leading-none tracking-[-3px]">Check</div>
+              <div className="text-brand-gold-light text-[30px] leading-none tracking-[-3px]">Point .0{item.id}</div>
             </div>
 
             {/* Bottom Content: Overlay */}
             <div className="absolute bottom-0 left-0 w-full bg-dark-gray/70 rounded-tr-[40px] p-8 min-h-[140px]">
-              <div className="text-white text-[28px] font-extrabold font-gothic leading-tight break-keep">
+              <div className="text-white text-[28px] font-bold font-gothic leading-tight break-keep">
                 <Trans i18nKey={item.title} components={{ br: <br /> }} />
               </div>
               {item.sub && (
-                <div className="text-white text-[28px] font-extrabold font-gothic leading-tight mt-1 break-keep">
+                <div className="text-white text-[28px] font-bold font-gothic leading-tight mt-1 break-keep">
                   <Trans i18nKey={item.sub} components={{ br: <br /> }} />
                 </div>
               )}

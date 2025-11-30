@@ -53,7 +53,7 @@ export default function MachinesLayout() {
             <Link
               to="/machines/produce"
               className={clsx(
-                "text-2xl md:text-3xl  transition-colors relative pb-4",
+                "text-[25px] transition-colors relative pb-4",
                 !isImports ? "text-brand-navy" : "text-brand-blue-light hover:text-brand-navy"
               )}
             >
@@ -63,7 +63,7 @@ export default function MachinesLayout() {
             <Link
               to="/machines/imports"
               className={clsx(
-                "text-2xl md:text-3xl  transition-colors relative pb-4",
+                "text-[25px] transition-colors relative pb-4",
                 isImports ? "text-brand-navy" : "text-brand-blue-light hover:text-brand-navy"
               )}
             >
@@ -73,7 +73,7 @@ export default function MachinesLayout() {
           </div>
 
           {/* Sub Navigation */}
-          <div className="flex justify-start gap-12 py-8 text-xl  text-brand-blue-light">
+          <div className="flex justify-start gap-12 py-8 text-[15px] text-brand-blue-light">
             {!isImports ? (
               produceProducts.map((product) => (
                 <Link

@@ -24,7 +24,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Aldrich&family=Nanum+Gothic&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Aldrich&family=Nanum+Gothic:wght@400;700;800&display=swap",
   },
 ];
 

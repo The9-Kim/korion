@@ -42,7 +42,7 @@ export default function ProductCard({ id, name, image, to }: ProductCardProps) {
     </>
   );
 
-  const containerClasses = "relative aspect-[3/4] rounded-[60px] overflow-hidden group cursor-pointer transition-transform duration-500 hover:scale-110 block";
+  const containerClasses = "relative aspect-[3/4] rounded-[60px] overflow-hidden group cursor-pointer transition-transform duration-500 hover:scale-110 block shadow-md/50";
 
   if (to) {
     return (
