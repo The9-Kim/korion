@@ -35,7 +35,7 @@ export default function Hero({ image, title, subtitle }: HeroProps) {
           <>
             {/* Background Image Placeholder */}
             <div className="absolute inset-0 bg-secondary-200 flex items-center justify-center">
-              <span className="text-secondary-400 text-lg font-medium">Main Banner Image Placeholder</span>
+              <span className="text-secondary-400 text-lg ">Main Banner Image Placeholder</span>
             </div>
 
             {/* Navigation Arrows (Only for slider) */}
@@ -53,10 +53,10 @@ export default function Hero({ image, title, subtitle }: HeroProps) {
         )}
 
         {/* Overlay Content (Top Left Logo) - Common for both */}
-        <div className="absolute top-12 left-12 md:top-20 md:left-20 z-10">
-          <div className="bg-secondary-800/80 backdrop-blur-sm p-6 rounded-sm inline-block text-white">
-            <h1 className="text-3xl md:text-4xl font-bold uppercase tracking-wider">{displayTitle}</h1>
-            <p className="text-lg md:text-xl font-light mt-1">{displaySubtitle}</p>
+        <div className="absolute left-40 z-10">
+          <div className="bg-black/25 backdrop-blur-md p-20 inline-block text-white">
+            <img src="/images/logo.png" alt="Korion" className="h-10 w-auto brightness-0 invert mb-8" />
+            <p className="text-[40px] font-light">{displaySubtitle}</p>
           </div>
         </div>
       </section>

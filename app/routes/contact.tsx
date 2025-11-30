@@ -24,7 +24,7 @@ export default function Contact() {
         <div className="relative z-10 bg-white/90 backdrop-blur-sm max-w-4xl w-full rounded-[40px] overflow-hidden shadow-xl">
           <div className="p-12 md:p-16">
             <div className="mb-10">
-              <span className="text-4xl md:text-5xl font-bold text-brand-gold uppercase tracking-widest">{t("hero.title")}</span>
+              <span className="text-4xl md:text-5xl  text-brand-gold uppercase tracking-widest">{t("hero.title")}</span>
             </div>
 
             <div className="space-y-6 text-gray-700">
@@ -77,10 +77,10 @@ export default function Contact() {
 
             <div className="mt-16 relative">
               <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
-                <span className="text-8xl font-bold text-gray-400 uppercase tracking-widest">{t("hero.title")}</span>
+                <span className="text-8xl  text-gray-400 uppercase tracking-widest">{t("hero.title")}</span>
               </div>
               <div className="relative z-10 flex items-start gap-4">
-                <div className="text-brand-navy font-bold text-3xl whitespace-nowrap">
+                <div className="text-brand-navy  text-3xl whitespace-nowrap">
                   {t("contact.serviceTitle")}
                 </div>
                 <div className="w-[1px] h-16 bg-gray-300 mx-2" />

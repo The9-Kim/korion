@@ -37,7 +37,7 @@ export default function Layout({ children }: LayoutProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-16 text-sm font-medium">
+          <nav className="hidden md:flex items-center gap-16 text-sm ">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               const textColor = isActive
@@ -66,7 +66,7 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Actions & Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:block bg-brand-navy text-white px-15 py-[10px] text-[20px] font-medium hover:bg-brand-navy-hover transition-colors rounded-sm">
+            <button className="hidden md:block bg-brand-navy text-white px-15 py-[10px] text-[20px]  hover:bg-brand-navy-hover transition-colors rounded-sm">
               {t("nav.catalogue")}
             </button>
             <button className="w-8 h-8 flex items-center justify-center text-brand-gold">
@@ -98,12 +98,12 @@ export default function Layout({ children }: LayoutProps) {
               <Link
                 key={item.path}
                 to={item.path}
-                className="text-lg font-medium text-brand-navy py-2 border-b border-gray-50 last:border-0"
+                className="text-lg  text-brand-navy py-2 border-b border-gray-50 last:border-0"
               >
                 {item.label}
               </Link>
             ))}
-            <button className="bg-brand-navy text-white w-full py-3 text-lg font-medium rounded-sm mt-2">
+            <button className="bg-brand-navy text-white w-full py-3 text-lg  rounded-sm mt-2">
               {t("nav.catalogue")}
             </button>
           </div>
@@ -124,7 +124,7 @@ export default function Layout({ children }: LayoutProps) {
             <p>사업자등록 번호 : 000-0000-000</p>
             <p className="mt-2">© 2025 Korion. All rights reserved.</p>
           </div>
-          <div className="text-2xl font-bold text-primary-300 uppercase">
+          <div className="text-2xl  text-primary-300 uppercase">
             Korion
           </div>
         </div>

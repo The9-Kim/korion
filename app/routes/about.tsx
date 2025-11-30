@@ -22,12 +22,12 @@ export default function About() {
 
         {/* Content Card */}
         <div className="relative z-10 bg-white/90 backdrop-blur-sm max-w-4xl w-full rounded-[40px] p-12 md:p-16 text-center shadow-xl">
-          <h2 className="text-2xl md:text-3xl font-medium text-gray-800 mb-6">
+          <h2 className="text-2xl md:text-3xl  text-gray-800 mb-6">
             {t("about.title")}
           </h2>
 
           <div className="mb-8">
-            <span className="text-4xl md:text-5xl font-bold text-brand-gold uppercase tracking-widest">{t("hero.title")}</span>
+            <span className="text-4xl md:text-5xl  text-brand-gold uppercase tracking-widest">{t("hero.title")}</span>
           </div>
 
           <div className="space-y-4 text-gray-600 leading-relaxed text-sm md:text-base break-keep">
@@ -54,7 +54,7 @@ export default function About() {
           </div>
 
           <div className="mt-12">
-            <button className="bg-brand-gold text-white px-8 py-3 rounded-md font-bold hover:bg-brand-gold transition-colors">
+            <button className="bg-brand-gold text-white px-8 py-3 rounded-md  hover:bg-brand-gold transition-colors">
               {t("about.contactBtn")}
             </button>
           </div>

@@ -10,7 +10,7 @@ export default function Imports() {
       {importBrands.map((brand) => (
         <div key={brand.name} className="mb-32 last:mb-0">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-brand-navy">{brand.name}</h3>
+            <h3 className="text-2xl  text-brand-navy">{brand.name}</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
@@ -19,12 +19,12 @@ export default function Imports() {
                 <div className="relative aspect-square rounded-[30px] overflow-hidden shadow-lg bg-gray-100">
                   {/* Image Placeholder */}
                   <div className="absolute inset-0 bg-gray-200 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center">
-                    <span className="text-gray-400 font-bold text-xl">{product.name} Image</span>
+                    <span className="text-gray-400  text-xl">{product.name} Image</span>
                   </div>
 
                   {/* Overlay Content */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-                    <div className="text-3xl font-bold mb-1">{product.name}</div>
+                    <div className="text-3xl  mb-1">{product.name}</div>
                     <div className="text-xs opacity-70 mb-4">{brand.name}</div>
                     <div className="flex justify-between items-end">
                       <span className="text-xs opacity-80">{t("machines.produce.viewDetail")}</span>
