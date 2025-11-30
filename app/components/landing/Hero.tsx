@@ -8,27 +8,24 @@ interface HeroProps {
   subtitle?: string;
 }
 
-export default function Hero({ image, title, subtitle }: HeroProps) {
+export default function Hero({ image, subtitle }: HeroProps) {
   const { t } = useTranslation();
 
-  // Use props if provided, otherwise fallback to translation keys (for home page)
-  const displayTitle = title || t("hero.title");
   const displaySubtitle = subtitle || t("hero.subtitle");
 
   return (
     <div className="flex flex-col w-full">
       {/* Top Section: Main Banner / Slider */}
-      <section className="relative w-full h-[600px] bg-gray-100 overflow-hidden group">
+      <section className="relative w-full h-[600px] 2xl:h-[1080px] bg-gray-100 overflow-hidden group">
         {image ? (
           // Static Image Mode (for Machines, etc.)
           <>
             <div className="absolute inset-0 bg-secondary-800">
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-60"
+                className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url('${image}')` }}
               />
             </div>
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/60 to-transparent" />
           </>
         ) : (
           // Default Slider Mode (for Home)
@@ -54,9 +51,9 @@ export default function Hero({ image, title, subtitle }: HeroProps) {
 
         {/* Overlay Content (Top Left Logo) - Common for both */}
         <div className="absolute left-40 z-10">
-          <div className="bg-black/25 backdrop-blur-md p-20 inline-block text-white">
-            <img src="/images/logo.png" alt="Korion" className="h-10 w-auto brightness-0 invert mb-8" />
-            <p className="text-[40px] font-light">{displaySubtitle}</p>
+          <div className="bg-black/33 p-20 inline-block rounded-br-[30px] flex flex-col justify-center px-12 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-white">
+            <img src="/images/logo.png" alt="Korion" className="h-10 w-auto brightness-0 invert mb-4" />
+            <p className="text-[40px] font-light leading-tight">{displaySubtitle}</p>
           </div>
         </div>
       </section>
