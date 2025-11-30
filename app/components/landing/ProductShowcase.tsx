@@ -25,21 +25,19 @@ export default function ProductShowcase() {
                 />
               </div>
 
-              {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80" />
-
-              {/* Content */}
-              <div className="absolute bottom-10 left-8 right-8">
-                <h3 className="text-4xl  text-white mb-2">{product.name}</h3>
-                {product.sub && (
-                  <p className="text-lg text-gray-300  mb-4">{product.sub}</p>
-                )}
-                <button className="bg-brand-gold text-white px-6 py-2 rounded-full text-sm  hover:bg-brand-gold-light transition-colors flex items-center gap-2">
-                  {t("products.more")}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
+              {/* Overlay Box */}
+              <div className="absolute bottom-16 left-0 w-full bg-black/50 px-6 pt-24 pb-4">
+                <div className="w-22 h-[6px] bg-brand-gold-light" />
+                <h3 className="text-[40px] text-white mb-0">{product.name}</h3>
+                <div className="flex justify-between items-center">
+                  <p className="text-[15px] text-white">Korion M Series</p>
+                  <button className="bg-brand-gold-light text-black px-1.5 py-0.5 rounded-full text-[10px] font-gothic font-bold hover:bg-white transition-colors flex items-center">
+                    {t("products.more")}
+                    <svg className="w-3 h-3 ml-[1px]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M5 3l14 9-14 9V3z" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           ))}
