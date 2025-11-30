@@ -10,6 +10,8 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const { t } = useTranslation();
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
   const navItems = [
     { path: "/about", label: t("nav.about") },
     { path: "/machines", label: t("nav.machines") },
@@ -19,6 +21,11 @@ export default function Layout({ children }: LayoutProps) {
   // Check if any of the nav items are currently active
   const isAnyNavActive = navItems.some(item => location.pathname === item.path);
 
+  // Close mobile menu when route changes
+  React.useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   return (
     <div className="min-h-screen flex flex-col bg-white text-secondary-900 font-aldrich">
       {/* Header */}
@@ -26,17 +33,13 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src="/images/logo.png" alt="Korion" className="h-6 w-auto" />
+            <img src="/images/logo.png" alt="Korion" className="h-5 md:h-6 w-auto" />
           </Link>
 
-          {/* Navigation */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-16 text-sm font-medium">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
-              // Logic: 
-              // - If this item is active: #183B63
-              // - If another item is active: #A8C3E3
-              // - If no item is active (e.g. Home): #183B63
               const textColor = isActive
                 ? "text-brand-navy"
                 : isAnyNavActive
@@ -61,7 +64,7 @@ export default function Layout({ children }: LayoutProps) {
             })}
           </nav>
 
-          {/* Actions */}
+          {/* Actions & Mobile Menu Button */}
           <div className="flex items-center gap-4">
             <button className="hidden md:block bg-brand-navy text-white px-15 py-[10px] text-[20px] font-medium hover:bg-brand-navy-hover transition-colors rounded-sm">
               {t("nav.catalogue")}
@@ -71,8 +74,40 @@ export default function Layout({ children }: LayoutProps) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
               </svg>
             </button>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden w-8 h-8 flex items-center justify-center text-brand-navy"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-100 shadow-lg py-4 px-4 flex flex-col gap-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className="text-lg font-medium text-brand-navy py-2 border-b border-gray-50 last:border-0"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <button className="bg-brand-navy text-white w-full py-3 text-lg font-medium rounded-sm mt-2">
+              {t("nav.catalogue")}
+            </button>
+          </div>
+        )}
       </header>
 
       {/* Main Content */}
