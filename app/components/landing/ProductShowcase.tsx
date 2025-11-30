@@ -34,7 +34,7 @@ export default function ProductShowcase() {
                 {product.sub && (
                   <p className="text-lg text-gray-300  mb-4">{product.sub}</p>
                 )}
-                <button className="bg-brand-gold text-white px-6 py-2 rounded-full text-sm  hover:bg-brand-gold-hover transition-colors flex items-center gap-2">
+                <button className="bg-brand-gold text-white px-6 py-2 rounded-full text-sm  hover:bg-brand-gold-light transition-colors flex items-center gap-2">
                   {t("products.more")}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
