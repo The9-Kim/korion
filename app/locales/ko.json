@@ -15,12 +15,12 @@
     "title": "정밀한 수확, 강력한 성능",
     "subtitle": "KORION M-Series 포리지 하베스터",
     "items": {
-      "1": { "title": "Check Point.01", "desc": "줄 독립형 트랙터 장착 사료 수확기" },
+      "1": { "title": "Check Point.01", "desc": "줄 독립형 트랙터 장착<br />사료 수확기" },
       "2": { "title": "Check Point.02", "desc": "풀 수거 시스템" },
       "3": { "title": "Check Point.03", "desc": "회전식 흡입 헤더" },
-      "4": { "title": "Check Point.04", "desc": "험난한 지형을 위한 보조 바퀴" },
-      "5": { "title": "Check Point.05", "desc": "4x4 트랜스미션 및 2가지 유형의 기어박스" },
-      "6": { "title": "Check Point.06", "desc": "Kemper 헤더를 제외한 코리온 자체 제조 부품" }
+      "4": { "title": "Check Point.04", "desc": "험난한 지형을 위한<br />보조 바퀴" },
+      "5": { "title": "Check Point.05", "desc": "4x4 트랜스미션 및<br />2가지 유형의 기어박스" },
+      "6": { "title": "Check Point.06", "desc": "Kemper 헤더를 제외한<br />코리온 자체 제조 부품" }
     }
   },
   "products": {

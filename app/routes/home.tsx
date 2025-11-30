@@ -15,7 +15,10 @@ export function meta({ }: Route.MetaArgs) {
 export default function Home() {
   return (
     <Layout>
-      <Hero image={"/images/main/main_image.png"} />
+      <Hero
+        video="/videos/main.mp4"
+        image="/images/main/main_video.jpg"
+      />
       <HeroBottom />
       <Features />
       <ProductShowcase />

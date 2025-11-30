@@ -4,11 +4,12 @@ import { useTranslation } from "react-i18next";
 
 interface HeroProps {
   image?: string;
+  video?: string;
   title?: string;
   subtitle?: string;
 }
 
-export default function Hero({ image, subtitle }: HeroProps) {
+export default function Hero({ image, video, subtitle }: HeroProps) {
   const { t } = useTranslation();
 
   const displaySubtitle = subtitle || t("hero.subtitle");
@@ -17,7 +18,24 @@ export default function Hero({ image, subtitle }: HeroProps) {
     <div className="flex flex-col w-full">
       {/* Top Section: Main Banner / Slider */}
       <section className="relative w-full h-[600px] 2xl:h-[1080px] bg-gray-100 overflow-hidden group">
-        {image ? (
+        {video ? (
+          // Video Mode (for Home)
+          <>
+            <div className="absolute inset-0 bg-secondary-800">
+              <video
+                className="absolute inset-0 w-full h-full object-cover"
+                src={video}
+                poster={image}
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+            </div>
+            {/* Dark overlay for better text visibility */}
+            <div className="absolute top-0 left-0 w-full h-full bg-black/30" />
+          </>
+        ) : image ? (
           // Static Image Mode (for Machines, etc.)
           <>
             <div className="absolute inset-0 bg-secondary-800">

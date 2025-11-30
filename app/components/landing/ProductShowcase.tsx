@@ -29,8 +29,8 @@ export default function ProductShowcase() {
               <div className="absolute bottom-16 left-0 w-full bg-black/50 px-6 pt-24 pb-4">
                 <div className="w-22 h-[6px] bg-brand-gold-light" />
                 <h3 className="text-[40px] text-white mb-0">{product.name}</h3>
-                <div className="flex justify-between items-center">
-                  <p className="text-[15px] text-white">Korion M Series</p>
+                <div className="flex flex-wrap justify-between items-center gap-y-1">
+                  <p className="text-[15px] text-white whitespace-nowrap">Korion M Series</p>
                   <button className="bg-brand-gold-light text-black px-1.5 py-0.5 rounded-full text-[10px] font-gothic font-bold hover:bg-white transition-colors flex items-center">
                     {t("products.more")}
                     <svg className="w-3 h-3 ml-[1px]" viewBox="0 0 24 24" fill="currentColor">

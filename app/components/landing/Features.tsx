@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 
 
@@ -32,7 +32,7 @@ export default function Features() {
                   <span className="text-brand-gold-light text-[15px] font-gothic font-extrabold">Point.0{feature.id}</span>
                 </div>
                 <h4 className="font-gothic font-bold text-[14px] text-brand-navy break-keep text-center px-8">
-                  {feature.desc}
+                  <Trans i18nKey={feature.desc} components={{ br: <br /> }} />
                 </h4>
               </div>
             ))}
