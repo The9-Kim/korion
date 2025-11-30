@@ -36,22 +36,36 @@ export default function Produce() {
 
       {/* Features Grid (Check Points) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-        {/* Reusing the style from Features.tsx but static for now as per design image */}
         {[
-          { id: 1, title: t("machines.produce.checkpoints.1.title"), sub: t("machines.produce.checkpoints.1.sub"), img: "bg-gray-200" },
-          { id: 2, title: t("machines.produce.checkpoints.2.title"), sub: t("machines.produce.checkpoints.2.sub"), img: "bg-gray-300" },
-          { id: 3, title: t("machines.produce.checkpoints.3.title"), sub: t("machines.produce.checkpoints.3.sub"), img: "bg-gray-400" },
-          { id: 4, title: t("machines.produce.checkpoints.4.title"), sub: t("machines.produce.checkpoints.4.sub"), img: "bg-gray-500" },
-          { id: 5, title: t("machines.produce.checkpoints.5.title"), sub: t("machines.produce.checkpoints.5.sub"), img: "bg-gray-600" },
-          { id: 6, title: t("machines.produce.checkpoints.6.title"), sub: t("machines.produce.checkpoints.6.sub"), img: "bg-gray-700" },
+          { id: 1, title: t("machines.produce.checkpoints.1.title"), sub: t("machines.produce.checkpoints.1.sub"), img: "/images/produce/produce-1.png" },
+          { id: 2, title: t("machines.produce.checkpoints.2.title"), sub: t("machines.produce.checkpoints.2.sub"), img: "/images/produce/produce-2.png" },
+          { id: 3, title: t("machines.produce.checkpoints.3.title"), sub: t("machines.produce.checkpoints.3.sub"), img: "/images/produce/produce-3.png" },
+          { id: 4, title: t("machines.produce.checkpoints.4.title"), sub: t("machines.produce.checkpoints.4.sub"), img: "/images/produce/produce-4.png" },
+          { id: 5, title: t("machines.produce.checkpoints.5.title"), sub: t("machines.produce.checkpoints.5.sub"), img: "/images/produce/produce-5.png" },
+          { id: 6, title: t("machines.produce.checkpoints.6.title"), sub: t("machines.produce.checkpoints.6.sub"), img: "/images/produce/produce-6.png" },
         ].map((item) => (
-          <div key={item.id} className="relative aspect-square rounded-2xl overflow-hidden group">
-            <div className={`absolute inset-0 ${item.img} transition-transform duration-500 group-hover:scale-105`} />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 text-white">
-              <div className="text-brand-gold  mb-1">Check Point.0{item.id}</div>
-              <div className=" text-lg">{item.title}</div>
-              {item.sub && <div className="text-sm opacity-90">{item.sub}</div>}
+          <div key={item.id} className="relative w-full aspect-316/408 overflow-hidden shadow-2xl group rounded-tr-[40px]">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <img src={item.img} alt={item.title} className="w-full h-full object-contain transition-transform duration-500" />
+            </div>
+
+            {/* Top Content: Check Point */}
+            <div className="absolute top-8 left-8 z-10">
+              <div className="text-brand-gold-light text-[40px] leading-none drop-shadow-md">Check</div>
+              <div className="text-brand-gold-light text-[40px] leading-none drop-shadow-md">Point .0{item.id}</div>
+            </div>
+
+            {/* Bottom Content: Overlay */}
+            <div className="absolute bottom-0 left-0 w-full bg-dark-gray/70 rounded-tr-[40px] p-8 min-h-[140px]">
+              <div className="text-white text-[28px] font-extrabold font-gothic leading-tight break-keep">
+                <Trans i18nKey={item.title} components={{ br: <br /> }} />
+              </div>
+              {item.sub && (
+                <div className="text-white text-[28px] font-extrabold font-gothic leading-tight mt-1 break-keep">
+                  <Trans i18nKey={item.sub} components={{ br: <br /> }} />
+                </div>
+              )}
             </div>
           </div>
         ))}

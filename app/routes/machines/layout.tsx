@@ -10,11 +10,38 @@ export default function MachinesLayout() {
   const location = useLocation();
   const isImports = location.pathname.includes("imports");
 
+  // Helper to get the current ID from the path (e.g., /machines/produce/m-4 -> m-4)
+  const pathSegments = location.pathname.split("/");
+  const currentId = pathSegments[3]; // 0: "", 1: "machines", 2: "produce"|"imports", 3: ID
+
+  // Hero Image Configuration
+  const getHeroImage = () => {
+    // 1. Check for specific Produce Product Hero
+    if (!isImports && currentId) {
+      // Example: /images/produce/m-4_hero.png
+      // You can customize this mapping or naming convention
+      return `/images/produce/${currentId}_hero.png`;
+    }
+
+    // 2. Check for specific Import Brand Hero
+    if (isImports && currentId) {
+      // Example: /images/imports/fliegl_hero.png
+      return `/images/imports/${currentId}_hero.png`;
+    }
+
+    // 3. Default Category Hero
+    if (isImports) {
+      return "/placeholder-machines-hero.jpg";
+    } else {
+      return "/images/produce/produce_hero.png";
+    }
+  };
+
   return (
     <Layout>
       {/* Machines Hero */}
       <Hero
-        image="/placeholder-machines-hero.jpg"
+        image={getHeroImage()}
         title={t("machines.hero.title")}
         subtitle={t("machines.hero.subtitle")}
       />
@@ -52,16 +79,27 @@ export default function MachinesLayout() {
                 <Link
                   key={product.id}
                   to={`/machines/produce/${product.id}`}
-                  className="hover:text-brand-navy transition-colors"
+                  className={clsx(
+                    "hover:text-brand-navy transition-colors",
+                    currentId === product.id && "text-brand-navy font-bold"
+                  )}
                 >
                   {product.name}
                 </Link>
               ))
             ) : (
               importBrands.map((brand) => (
-                <span key={brand.name} className="cursor-pointer hover:text-brand-navy transition-colors">
+                <Link
+                  key={brand.name}
+                  to={`/machines/imports/${brand.name.toLowerCase()}`} // Assuming you have routes for brands or will handle this
+                  className={clsx(
+                    "cursor-pointer hover:text-brand-navy transition-colors",
+                    // Simple check, might need adjustment if brand names have spaces/special chars
+                    currentId === brand.name.toLowerCase() && "text-brand-navy font-bold"
+                  )}
+                >
                   {brand.name}
-                </span>
+                </Link>
               ))
             )}
           </div>
