@@ -24,7 +24,7 @@ export default function Features() {
           <h3 className="text-[45px] text-brand-navy font-gothic font-extrabold mt-4">{t("features.subtitle")}</h3>
         </div>
         <div className="items-center justify-center flex">
-          <div className="grid grid-cols-1 md:grid-cols-3 bg-light-gray/30 max-w-[700px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 bg-light-gray/30 max-w-[700px] shadow-xl">
             {features.map((feature) => (
               <div key={feature.id} className="h-[184px] flex flex-col items-center justify-center border border-white group">
                 <div className="w-24 h-24 rounded-full flex flex-col items-center justify-center mb-4 shadow-sm bg-white">
