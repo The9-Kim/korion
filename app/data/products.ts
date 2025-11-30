@@ -13,6 +13,7 @@ export interface Product {
   id: string;
   name: string;
   subtitle?: string;
+  image?: string;
   description: string;
   features: ProductFeature[];
   specs: ProductSpec[];
@@ -25,6 +26,8 @@ export const produceProducts: Product[] = [
     id: "m-4",
     name: "M-4",
     category: "produce",
+    subtitle: "Kemper header",
+    image: "/images/main/m-4.png",
     description: "M-4 모델(4열)은 효율성과 성능의 다용도성을 위해 제작되었습니다. Kemper 헤더를 장착하도록 설계되었으며, PTO 축 오버드라이브 클러치를 통해 180-240 HP의 출력을 제공합니다. M-4는 어떤 작업 환경에서도 최적화된 효율성을 제공합니다.",
     features: [
       { title: "4열", description: "4열 수확의 최적화" },
@@ -41,6 +44,8 @@ export const produceProducts: Product[] = [
     id: "m-6",
     name: "M-6",
     category: "produce",
+    subtitle: "Kemper header",
+    image: "/images/main/m-6.png",
     description: "M-6 모델은 고성능 작업을 위해 설계되었습니다.",
     features: [],
     specs: []
@@ -49,6 +54,7 @@ export const produceProducts: Product[] = [
     id: "m-350",
     name: "M-350",
     category: "produce",
+    image: "/images/main/m-350.png",
     description: "M-350은 대규모 작업을 위한 강력한 솔루션입니다.",
     features: [],
     specs: []
@@ -57,6 +63,7 @@ export const produceProducts: Product[] = [
     id: "m-2200",
     name: "M-2200",
     category: "produce",
+    image: "/images/main/m-2200.png",
     description: "M-2200은 최고의 생산성을 보장합니다.",
     features: [],
     specs: []
