@@ -2,6 +2,7 @@ import { Outlet, Link, useLocation } from "react-router";
 import { useTranslation } from "react-i18next";
 import { clsx } from "clsx";
 import Layout from "../../components/Layout";
+import Hero from "../../components/landing/Hero";
 import { produceProducts, importBrands } from "../../data/products";
 
 export default function MachinesLayout() {
@@ -12,21 +13,11 @@ export default function MachinesLayout() {
   return (
     <Layout>
       {/* Machines Hero */}
-      <div className="relative w-full h-[400px] bg-gray-900 overflow-hidden">
-        {/* Background Placeholder */}
-        <div className="absolute inset-0 bg-secondary-800">
-          <div className="absolute inset-0 bg-[url('/placeholder-machines-hero.jpg')] bg-cover bg-center opacity-60" />
-        </div>
-
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/60 to-transparent" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
-          <div className="text-white">
-            <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-2">{t("machines.hero.title")}</h1>
-            <p className="text-xl md:text-2xl font-light">{t("machines.hero.subtitle")}</p>
-          </div>
-        </div>
-      </div>
+      <Hero
+        image="/placeholder-machines-hero.jpg"
+        title={t("machines.hero.title")}
+        subtitle={t("machines.hero.subtitle")}
+      />
 
       {/* Tabs Navigation */}
       <div className="bg-white sticky top-20 z-40 pb-4">

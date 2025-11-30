@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import Layout from "../components/Layout";
 import Hero from "../components/landing/Hero";
+import HeroBottom from "../components/landing/HeroBottom";
 import Features from "../components/landing/Features";
 import ProductShowcase from "../components/landing/ProductShowcase";
 
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
+      <HeroBottom />
       <Features />
       <ProductShowcase />
     </Layout>
