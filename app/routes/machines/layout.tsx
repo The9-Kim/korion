@@ -20,13 +20,13 @@ export default function MachinesLayout() {
     if (!isImports && currentId) {
       // Example: /images/produce/m-4_hero.png
       // You can customize this mapping or naming convention
-      return `/images/produce/${currentId}_hero.png`;
+      return `/images/produce/${currentId}-image-01.png`;
     }
 
     // 2. Check for specific Import Brand Hero
     if (isImports && currentId) {
       // Example: /images/imports/fliegl_hero.png
-      return `/images/imports/${currentId}_hero.png`;
+      return `/images/imports/${currentId}-image-01.png`;
     }
 
     // 3. Default Category Hero

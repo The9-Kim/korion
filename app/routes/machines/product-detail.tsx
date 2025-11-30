@@ -39,7 +39,7 @@ export default function ProductDetail() {
         <div className="flex flex-col lg:flex-row items-start">
           {/* Left Text Content */}
           <div className="lg:w-1/3 z-10 pt-20 pl-10">
-            <div className="text-[30px] font-gothic text-[#333333] mb-2 tracking-tighter">
+            <div className="text-[30px] font-gothic text-dark-gray mb-2 tracking-tighter">
               {t(`productData.${product.id}.subtitle`, product.subtitle || "최적화된 효율성")}
             </div>
             <h1 className="text-[65px] font-gothic font-bold text-brand-navy leading-tight mb-8">
@@ -54,7 +54,7 @@ export default function ProductDetail() {
           {/* Right Carousel */}
           <div className="lg:w-2/3 w-full mt-10 lg:mt-0 relative">
             {/* Placeholder for the gray background shape from design */}
-            <div className="absolute top-20 right-0 w-[90%] h-[500px] bg-[#D9D9D9] rounded-tl-[40px] -z-10 hidden lg:block" />
+            <div className="absolute top-20 right-0 w-[90%] h-[500px] bg-light-gray rounded-tl-[40px] -z-10 hidden lg:block" />
 
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
@@ -63,18 +63,22 @@ export default function ProductDetail() {
               navigation
               pagination={{ clickable: true }}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
-              className="w-full h-[600px] lg:h-[800px] rounded-tl-[40px]"
+              className="w-full aspect-[1082/586] rounded-tl-[40px]"
             >
               {/* Using product image multiple times as placeholder for carousel */}
-              {[1, 2, 3].map((_, idx) => (
-                <SwiperSlide key={idx} className="flex items-center justify-center">
-                  <div className="relative w-full h-full flex items-center justify-center">
+              {[1, 2, 3, 4].map((num) => (
+                <SwiperSlide key={num} className="flex items-center justify-center">
+                  <div className="relative w-full h-full">
                     {/* Replace with actual carousel images when available */}
-                    {product?.image ? (
-                      <img src={product.image} alt={`${product.name} ${idx + 1}`} className="max-w-full max-h-full object-contain" />
-                    ) : (
-                      <div className="text-4xl text-gray-400">Image {idx + 1}</div>
-                    )}
+                    <img
+                      src={`/images/${product?.category === 'produce' ? 'produce' : 'imports'}/${product?.id}-image-0${num}.png`}
+                      alt={`${product?.name} ${num}`}
+                      className="w-full h-full object-cover rounded-tl-[40px]"
+                      onError={(e) => {
+                        // Fallback to placeholder if image not found
+                        (e.target as HTMLImageElement).src = "https://placehold.co/1082x586?text=No+Image";
+                      }}
+                    />
                   </div>
                 </SwiperSlide>
               ))}
@@ -91,7 +95,7 @@ export default function ProductDetail() {
       </div>
 
       {/* Section 3: Visual Feature 1 (Gray Background) */}
-      <div className="relative w-full h-[660px] bg-[#D9D9D9] overflow-hidden">
+      <div className="relative w-full h-[660px] bg-light-gray overflow-hidden">
         {/* Background Image Placeholder - M-6(3) */}
         <div className="absolute inset-0 opacity-50 bg-cover bg-center" style={{ backgroundImage: 'url(/images/produce/produce-feature-1.png)' }}>
           {/* Fallback if image missing */}
@@ -156,7 +160,7 @@ export default function ProductDetail() {
               to={`/machines/${related.category === 'produce' ? 'produce' : 'imports'}/${related.id}`}
               className="group flex flex-col items-center"
             >
-              <div className="relative w-[162px] h-[162px] rounded-full bg-white border border-[#D9D9D9] shadow-md flex items-center justify-center mb-6 overflow-hidden group-hover:border-brand-gold transition-colors duration-300">
+              <div className="relative w-[162px] h-[162px] rounded-full bg-white border border-light-gray shadow-md flex items-center justify-center mb-6 overflow-hidden group-hover:border-brand-gold transition-colors duration-300">
                 {related.image ? (
                   <img src={related.image} alt={related.name} className="w-[80%] h-[80%] object-contain" />
                 ) : (
