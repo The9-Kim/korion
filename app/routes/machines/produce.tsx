@@ -12,7 +12,7 @@ export default function Produce() {
       <div className="text-center mb-36">
         <span className="text-[30px] font-gothic text-dark-gray mb-2 block tracking-tighter">{t("machines.produce.intro.badge")}</span>
         <h2 className="text-[45px] font-gothic font-bold text-brand-navy mb-8">{t("machines.produce.intro.title")}</h2>
-        <div className="w-40 h-[2px] bg-brand-gold-light mx-auto my-16" />
+        <div className="w-40 h-[2px] bg-brand-gold-lighter mx-auto my-16" />
 
         <div className="mx-auto text-brand-navy break-keep text-[25px]/[50px] tracking-tight">
           <p>
@@ -52,8 +52,8 @@ export default function Produce() {
 
             {/* Top Content: Check Point */}
             <div className="absolute top-8 left-8 z-10">
-              <div className="text-brand-gold-light text-[30px] leading-none tracking-[-3px]">Check</div>
-              <div className="text-brand-gold-light text-[30px] leading-none tracking-[-3px]">Point .0{item.id}</div>
+              <div className="text-brand-gold-lighter text-[30px] leading-none tracking-[-3px]">Check</div>
+              <div className="text-brand-gold-lighter text-[30px] leading-none tracking-[-3px]">Point .0{item.id}</div>
             </div>
 
             {/* Bottom Content: Overlay */}

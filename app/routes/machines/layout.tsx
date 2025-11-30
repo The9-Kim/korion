@@ -47,9 +47,9 @@ export default function MachinesLayout() {
       />
 
       {/* Tabs Navigation */}
-      <div className="bg-white sticky top-20 z-40 pb-4">
+      <div className="bg-white sticky top-20 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-start gap-12 pt-12 border-b border-gray-200">
+          <div className="flex justify-start gap-12 pt-12 border-b border-light-gray">
             <Link
               to="/machines/produce"
               className={clsx(
@@ -73,7 +73,7 @@ export default function MachinesLayout() {
           </div>
 
           {/* Sub Navigation */}
-          <div className="flex justify-start gap-12 py-8 text-[15px] text-brand-blue-light">
+          <div className="flex justify-start gap-12 pt-6 pb-2 text-[15px] text-brand-blue-light">
             {!isImports ? (
               produceProducts.map((product) => (
                 <Link
