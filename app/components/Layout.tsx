@@ -26,11 +26,11 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold tracking-widest text-brand-gold uppercase">Korion</span>
+            <img src="/images/logo.png" alt="Korion" className="h-6 w-auto" />
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-12 text-sm font-medium">
+          <nav className="hidden md:flex items-center gap-16 text-sm font-medium">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               // Logic: 
@@ -48,7 +48,7 @@ export default function Layout({ children }: LayoutProps) {
                   key={item.path}
                   to={item.path}
                   className={clsx(
-                    "relative py-1 transition-colors hover:text-brand-navy",
+                    "relative py-1 transition-colors hover:text-brand-navy text-[20px]",
                     textColor
                   )}
                 >
@@ -63,7 +63,7 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:block bg-brand-navy text-white px-6 py-2 text-sm font-medium hover:bg-brand-navy-hover transition-colors rounded-sm">
+            <button className="hidden md:block bg-brand-navy text-white px-15 py-[10px] text-[20px] font-medium hover:bg-brand-navy-hover transition-colors rounded-sm">
               {t("nav.catalogue")}
             </button>
             <button className="w-8 h-8 flex items-center justify-center text-brand-gold">

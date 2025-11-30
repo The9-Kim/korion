@@ -2,9 +2,10 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 const products = [
-  { id: "M-350", name: "M-350", sub: "", imageColor: "bg-gray-300" },
-  { id: "M-4", name: "M-4", sub: "Kemper header", imageColor: "bg-gray-400" },
-  { id: "M-6", name: "M-6", sub: "Kemper header", imageColor: "bg-gray-500" },
+  { id: "M-4", name: "M-4", sub: "Kemper header", image: "/images/main/m-4.png" },
+  { id: "M-6", name: "M-6", sub: "Kemper header", image: "/images/main/m-6.png" },
+  { id: "M-350", name: "M-350", sub: "", image: "/images/main/m-350.png" },
+  { id: "M-2200", name: "M-2200", sub: "", image: "/images/main/m-2200.png" },
 ];
 
 export default function ProductShowcase() {
@@ -12,14 +13,16 @@ export default function ProductShowcase() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <div key={product.id} className="relative aspect-[3/4] rounded-3xl overflow-hidden group cursor-pointer">
-              {/* Background Image Placeholder */}
-              <div className={`absolute inset-0 ${product.imageColor} transition-transform duration-500 group-hover:scale-105`}>
-                <div className="absolute inset-0 flex items-center justify-center text-white/50 font-bold text-4xl">
-                  {product.name} Image
-                </div>
+            <div key={product.id} className="relative aspect-[3/4] rounded-[60px] overflow-hidden group cursor-pointer transition-transform duration-500 hover:scale-110">
+              {/* Background Image */}
+              <div className="absolute inset-0 bg-gray-200">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Overlay Gradient */}
@@ -27,11 +30,11 @@ export default function ProductShowcase() {
 
               {/* Content */}
               <div className="absolute bottom-10 left-8 right-8">
-                <h3 className="text-5xl font-bold text-white mb-2">{product.name}</h3>
+                <h3 className="text-4xl font-bold text-white mb-2">{product.name}</h3>
                 {product.sub && (
-                  <p className="text-xl text-gray-300 font-medium mb-4">{product.sub}</p>
+                  <p className="text-lg text-gray-300 font-medium mb-4">{product.sub}</p>
                 )}
-                <button className="bg-primary-500 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-600 transition-colors flex items-center gap-2">
+                <button className="bg-brand-gold text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-brand-gold-hover transition-colors flex items-center gap-2">
                   {t("products.more")}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
