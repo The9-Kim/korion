@@ -82,21 +82,11 @@
   "productData": {
     "m-4": {
       "name": "M-4",
-      "description": "M-4 모델(4열)은 효율성과 성능의 다용도성을 위해 제작되었습니다. Kemper 헤더를 장착하도록 설계되었으며, PTO 축 오버드라이브 클러치를 통해 180-240 HP의 출력을 제공합니다. M-4는 어떤 작업 환경에서도 최적화된 효율성을 제공합니다.",
-      "features": {
-        "0": { "title": "4열", "desc": "4열 수확의 최적화" },
-        "1": { "title": "Kemper 헤더", "desc": "Kemper 헤더 장착" },
-        "2": { "title": "최대 3m", "desc": "작업 폭 최대 3m" }
-      },
-      "specs": {
-        "0": { "label": "수확기 최적화 된 출력", "value": "180-240 HP" },
-        "1": { "label": "PTO 축", "value": "오버드라이브 클러치" },
-        "2": { "label": "Uni Cracker", "value": "장착 가능" }
-      },
+      "description": "M-4 모델(4열)은 효율성과 성능의 다용도성을 위해 제작되었습니다.<br />Kemper 헤더를 장착하도록 설계되었으며,<br />PTO 축 오버드라이브 클러치를 통해 180-240 HP의 출력을 제공합니다.<br />M-4는 어떤 작업 환경에서도 최적화된 효율성을 제공합니다.",
       "visualFeatures": {
         "section1": {
           "title": "4열 수확의 최적화",
-          "features": ["4열", "최대 3m", "Kemper 헤더"]
+          "features": ["4열", "Kemper 헤더", "최대 3m"]
         },
         "section2": {
           "title": "수확에 최적화 된 출력",

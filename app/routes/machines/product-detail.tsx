@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { produceProducts, importBrands, type Product } from "../../data/products";
 import ProductFeatureSection from "../../components/ProductFeatureSection";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -52,10 +52,10 @@ export default function ProductDetail() {
             <div className="text-[20px] lg:text-[30px] font-gothic text-dark-gray mb-2 tracking-tighter">
               {t(`productData.${product.id}.subtitle`, product.subtitle || "최적화된 효율성")}
             </div>
-            <h1 className="text-[40px] lg:text-[65px] font-gothic font-bold text-brand-navy leading-tight mb-8">
+            <h1 className="text-[40px] lg:text-[65px] font-gothic font-bold text-brand-navy leading-tight mb-4">
               {product.category === 'produce' ? `KORION ${product.name}` : product.name}
             </h1>
-            <div className="w-[100px] lg:w-[171px] h-[3px] bg-brand-gold-light mb-8 mx-auto lg:mx-0" />
+            <div className="w-[100px] lg:w-[171px] h-[3px] bg-brand-gold-light mb-3 mx-auto lg:mx-0" />
             <button className="text-[18px] lg:text-[22px] font-gothic text-brand-navy underline hover:text-brand-gold transition-colors">
               {t("machines.detail.downloadCatalog")}
             </button>
@@ -74,7 +74,7 @@ export default function ProductDetail() {
                 navigation
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
-                className="w-full aspect-[1082/586] rounded-tl-[40px]"
+                className="w-full aspect-1082/586 rounded-tl-[40px]"
               >
                 {Array.from({ length: config.imageCount }).map((_, idx) => {
                   const num = idx + 1;
@@ -103,8 +103,8 @@ export default function ProductDetail() {
 
       {/* Section 2: Description Text */}
       <div className="max-w-4xl mx-auto px-4 pb-24 text-center">
-        <p className="text-[25px] leading-[50px] font-gothic text-brand-navy break-keep">
-          {t(`productData.${product.id}.description`, product.description)}
+        <p className="text-[25px] leading-[50px] tracking-tighter font-gothic text-brand-navy break-keep">
+          <Trans i18nKey={`productData.${product.id}.description`} components={{ br: <br /> }} />
         </p>
       </div>
 

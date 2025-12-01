@@ -35,13 +35,13 @@ export default function ProductFeatureSection({
               {title}
             </div>
             {withUnderline && (
-              <div className="w-[110px] h-[5px] bg-white/80 mt-6" />
+              <div className="w-[110px] h-[5px] bg-white/80 mt-20" />
             )}
           </div>
         )}
 
         {/* Features */}
-        <div className="flex flex-col gap-6 items-center">
+        <div className="flex flex-col gap-12 items-center">
           {features.map((feature, idx) => (
             <div key={idx} className="text-[40px] font-gothic font-bold drop-shadow-md leading-tight">
               {feature}
