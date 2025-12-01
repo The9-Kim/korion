@@ -5,6 +5,7 @@ export interface Product {
   image?: string;
   category: "produce" | "import";
   brand?: string; // For imports
+  nameFont?: "gothic";
 }
 
 export const produceProducts: Product[] = [
@@ -36,7 +37,10 @@ export const produceProducts: Product[] = [
   }
 ];
 
-export const importBrands = [
+export const importBrands: {
+  name: string;
+  products: Product[];
+}[] = [
   {
     name: "Fliegl",
     products: [
@@ -78,7 +82,8 @@ export const importBrands = [
         name: "수직믹서",
         category: "import" as const,
         brand: "BVL",
-        image: "/images/imports/bvl_card.png"
+        image: "/images/imports/bvl_card.png",
+        nameFont: "gothic"
       }
     ]
   },
@@ -90,14 +95,16 @@ export const importBrands = [
         name: "배수로 굴착기",
         category: "import" as const,
         brand: "Dondi",
-        image: "/images/imports/bsr_card.png"
+        image: "/images/imports/bsr_card.png",
+        nameFont: "gothic"
       },
       {
         id: "cultivator",
         name: "경운기",
         category: "import" as const,
         brand: "Dondi",
-        image: "/images/imports/gwg_card.png"
+        image: "/images/imports/gwg_card.png",
+        nameFont: "gothic"
       }
     ]
   }

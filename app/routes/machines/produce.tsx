@@ -84,6 +84,7 @@ export default function Produce() {
             name={product.name}
             image={product.image}
             to={`/machines/produce/${product.id}`}
+            nameFont={product.nameFont}
           />
         ))}
       </div>

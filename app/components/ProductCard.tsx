@@ -10,20 +10,21 @@ interface ProductCardProps {
   subtitle?: string;
   category?: string;
   className?: string;
+  nameFont?: "gothic";
 }
 
-export default function ProductCard({ id, name, image, to, subtitle, category, className }: ProductCardProps) {
+export default function ProductCard({ id, name, image, to, subtitle, category, className, nameFont }: ProductCardProps) {
   const { t } = useTranslation();
 
   const Content = () => (
     <>
       {/* Background Image */}
-      <div className="absolute inset-0 bg-gray-200">
+      <div className="absolute inset-0 bg-gray-200 overflow-hidden">
         {image && (
           <img
             src={image}
             alt={name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         )}
       </div>
@@ -31,7 +32,7 @@ export default function ProductCard({ id, name, image, to, subtitle, category, c
       {/* Overlay Box */}
       <div className="absolute bottom-16 left-0 w-full bg-black/50 px-6 pt-24 pb-4">
         <div className="w-22 h-[6px] bg-brand-gold-lighter" />
-        <h3 className="text-[40px] text-white mb-0">{name}</h3>
+        <h3 className={`text-[40px] text-white mb-0 ${nameFont === 'gothic' ? 'font-gothic font-bold' : ''}`}>{name}</h3>
         <div className="flex flex-wrap justify-between items-center gap-y-1">
           <p className="text-[15px] text-white whitespace-nowrap">
             {subtitle || (category === 'produce' ? "Korion M Series" : "")}
