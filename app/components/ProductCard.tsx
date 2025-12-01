@@ -7,9 +7,12 @@ interface ProductCardProps {
   name: string;
   image?: string;
   to?: string;
+  subtitle?: string;
+  category?: string;
+  className?: string;
 }
 
-export default function ProductCard({ id, name, image, to }: ProductCardProps) {
+export default function ProductCard({ id, name, image, to, subtitle, category, className }: ProductCardProps) {
   const { t } = useTranslation();
 
   const Content = () => (
@@ -30,7 +33,9 @@ export default function ProductCard({ id, name, image, to }: ProductCardProps) {
         <div className="w-22 h-[6px] bg-brand-gold-lighter" />
         <h3 className="text-[40px] text-white mb-0">{name}</h3>
         <div className="flex flex-wrap justify-between items-center gap-y-1">
-          <p className="text-[15px] text-white whitespace-nowrap">Korion M Series</p>
+          <p className="text-[15px] text-white whitespace-nowrap">
+            {subtitle || (category === 'produce' ? "Korion M Series" : "")}
+          </p>
           <button className="bg-brand-gold-lighter text-black px-1.5 py-0.5 rounded-full text-[10px] font-gothic font-bold hover:bg-white transition-colors flex items-center">
             {t("products.more")}
             <svg className="w-3 h-3 ml-[1px]" viewBox="0 0 24 24" fill="currentColor">
@@ -42,7 +47,7 @@ export default function ProductCard({ id, name, image, to }: ProductCardProps) {
     </>
   );
 
-  const containerClasses = "relative aspect-[3/4] rounded-[60px] overflow-hidden group cursor-pointer transition-transform duration-500 hover:scale-110 block shadow-md/50";
+  const containerClasses = `relative aspect-[3/4] rounded-[60px] overflow-hidden group cursor-pointer transition-transform duration-500 hover:scale-110 block shadow-md/50 ${className || ""}`;
 
   if (to) {
     return (
