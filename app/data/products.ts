@@ -66,8 +66,8 @@ export const importBrands: {
         image: "/images/imports/ads60_card.png"
       },
       {
-        id: "ads-60",
-        name: "ADS 60",
+        id: "others",
+        name: "Others",
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/others_card.png"

@@ -88,19 +88,28 @@ export default function MachinesLayout() {
                 </Link>
               ))
             ) : (
-              importBrands.map((brand) => (
-                <Link
-                  key={brand.name}
-                  to={`/machines/imports/${brand.name.toLowerCase()}`} // Assuming you have routes for brands or will handle this
-                  className={clsx(
-                    "cursor-pointer hover:text-brand-navy transition-colors",
-                    // Simple check, might need adjustment if brand names have spaces/special chars
-                    currentId === brand.name.toLowerCase() && "text-brand-navy font-bold"
-                  )}
-                >
-                  {brand.name}
-                </Link>
-              ))
+              importBrands.map((brand) => {
+                // Map brand to specific product ID
+                let targetId = "";
+                if (brand.name === "Fliegl") targetId = "ads-120";
+                else if (brand.name === "BVL") targetId = "vertical-mixer";
+                else if (brand.name === "Dondi") targetId = "ditch-digger";
+                else targetId = brand.name.toLowerCase();
+
+                return (
+                  <Link
+                    key={brand.name}
+                    to={`/machines/imports/${targetId}`}
+                    className={clsx(
+                      "cursor-pointer hover:text-brand-navy transition-colors",
+                      // Check if the current path includes any of the brand's products
+                      brand.products.some(p => p.id === currentId) && "text-brand-navy font-bold"
+                    )}
+                  >
+                    {brand.name}
+                  </Link>
+                );
+              })
             )}
           </div>
         </div>
