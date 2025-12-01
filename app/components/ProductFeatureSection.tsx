@@ -30,14 +30,14 @@ export default function ProductFeatureSection({
       <div className="relative max-w-7xl mx-auto h-full flex flex-col justify-center items-center text-white text-center px-4">
         {/* Title */}
         {title && (
-          <div className="flex flex-col items-center mb-12">
+          <div className="flex flex-col items-center">
             <div className="text-[25px] font-gothic drop-shadow-md leading-tight">
               {title}
             </div>
-            {withUnderline && (
-              <div className="w-[110px] h-[5px] bg-white/80 mt-20" />
-            )}
           </div>
+        )}
+        {withUnderline && (
+          <div className="w-[110px] h-[5px] bg-white/80 mt-20 mb-12" />
         )}
 
         {/* Features */}
