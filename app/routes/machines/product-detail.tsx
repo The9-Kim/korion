@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import { produceProducts, importBrands, type Product } from "../../data/products";
+import ProductFeatureSection from "../../components/ProductFeatureSection";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -29,10 +30,10 @@ export default function ProductDetail() {
   }
 
   // Product Configuration
-  const productConfig: Record<string, { useSwiper: boolean; imageCount: number }> = {
-    "m-2200": { useSwiper: false, imageCount: 0 },
+  const productConfig: Record<string, { useSwiper: boolean; imageCount: number; showFeatures: boolean }> = {
+    "m-2200": { useSwiper: false, imageCount: 0, showFeatures: false },
     // Default for others
-    "default": { useSwiper: true, imageCount: 4 },
+    "default": { useSwiper: true, imageCount: 4, showFeatures: true },
   };
 
   const config = productConfig[id || ""] || productConfig["default"];
@@ -107,58 +108,28 @@ export default function ProductDetail() {
         </p>
       </div>
 
-      {/* Section 3: Visual Feature 1 */}
-      <div className="relative w-full h-[660px] bg-light-gray overflow-hidden">
-        {/* Background Image Placeholder - M-6(3) */}
-        <div className="absolute inset-0 opacity-50 bg-cover bg-center" style={{ backgroundImage: 'url(/images/produce/produce-feature-1.png)' }}>
-          {/* Fallback if image missing */}
-        </div>
+      {/* Feature Sections (Conditional) */}
+      {config.showFeatures && (
+        <>
+          {/* Section 3: Visual Feature 1 */}
+          <ProductFeatureSection
+            backgroundImage={`/images/${product?.category === 'produce' ? 'produce' : 'imports'}/${product?.id}-feature-01.png`}
+            className="bg-light-gray"
+            title={t(`productData.${product.id}.visualFeatures.section1.title`, "")}
+            withUnderline
+            features={t(`productData.${product.id}.visualFeatures.section1.features`, { returnObjects: true }) as string[]}
+          />
 
-        <div className="absolute inset-0 bg-black/10" /> {/* Slight overlay */}
-
-        <div className="relative max-w-7xl mx-auto h-full flex flex-col justify-center items-center text-white text-center">
-          <div className="grid grid-cols-3 gap-20 w-full px-4">
-            <div>
-              <div className="text-[40px] font-gothic font-bold mb-4 drop-shadow-md">4열</div>
-              <div className="text-[25px] font-gothic drop-shadow-md">4열 수확의 최적화</div>
-              <div className="w-[110px] h-[5px] bg-white/80 mx-auto mt-8" />
-            </div>
-            <div>
-              <div className="text-[40px] font-gothic font-bold mb-4 drop-shadow-md">최대 3m</div>
-              <div className="text-[25px] font-gothic drop-shadow-md">작업 폭</div>
-            </div>
-            <div>
-              <div className="text-[40px] font-gothic font-bold mb-4 drop-shadow-md">Kemper 헤더</div>
-              <div className="text-[25px] font-gothic drop-shadow-md">장착 가능</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Section 4: Visual Feature 2 (Black Background) */}
-      <div className="relative w-full h-[660px] bg-black overflow-hidden">
-        {/* Background Image Placeholder - M-6(5) */}
-        <div className="absolute inset-0 opacity-60 bg-cover bg-center" style={{ backgroundImage: 'url(/images/produce/produce-feature-2.png)' }}>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto h-full flex flex-col justify-center items-center text-white text-center">
-          <div className="grid grid-cols-3 gap-20 w-full px-4">
-            <div>
-              <div className="text-[40px] font-gothic font-bold mb-4 drop-shadow-md">수확에 최적화 된 출력</div>
-              <div className="text-[25px] font-gothic drop-shadow-md">고효율 엔진</div>
-              <div className="w-[110px] h-[5px] bg-white/80 mx-auto mt-8" />
-            </div>
-            <div>
-              <div className="text-[40px] font-gothic font-bold mb-4 drop-shadow-md">180-240 HP</div>
-              <div className="text-[25px] font-gothic drop-shadow-md">강력한 파워</div>
-            </div>
-            <div>
-              <div className="text-[40px] font-gothic font-bold mb-4 drop-shadow-md">Uni Cracker</div>
-              <div className="text-[25px] font-gothic drop-shadow-md">장착 가능</div>
-            </div>
-          </div>
-        </div>
-      </div>
+          {/* Section 4: Visual Feature 2 */}
+          <ProductFeatureSection
+            backgroundImage={`/images/${product?.category === 'produce' ? 'produce' : 'imports'}/${product?.id}-feature-02.png`}
+            className="bg-black"
+            title={t(`productData.${product.id}.visualFeatures.section2.title`, "")}
+            withUnderline
+            features={t(`productData.${product.id}.visualFeatures.section2.features`, { returnObjects: true }) as string[]}
+          />
+        </>
+      )}
 
       {/* Section 5: More Series Navigation */}
       <div className="py-32 bg-white text-center">

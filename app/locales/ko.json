@@ -92,19 +92,59 @@
         "0": { "label": "수확기 최적화 된 출력", "value": "180-240 HP" },
         "1": { "label": "PTO 축", "value": "오버드라이브 클러치" },
         "2": { "label": "Uni Cracker", "value": "장착 가능" }
+      },
+      "visualFeatures": {
+        "section1": {
+          "title": "4열 수확의 최적화",
+          "features": ["4열", "최대 3m", "Kemper 헤더"]
+        },
+        "section2": {
+          "title": "수확에 최적화 된 출력",
+          "features": ["180-240 HP", "PTO 축 오버드라이브 클러치", "Uni Cracker"]
+        }
       }
     },
     "m-6": {
       "name": "M-6",
-      "description": "M-6 모델은 고성능 작업을 위해 설계되었습니다."
+      "description": "M-6 모델은 고성능 작업을 위해 설계되었습니다.",
+      "visualFeatures": {
+        "section1": {
+          "title": "타이틀 입력",
+          "features": ["특징 1", "특징 2", "특징 3"]
+        },
+        "section2": {
+          "title": "타이틀 입력",
+          "features": ["특징 1", "특징 2", "특징 3"]
+        }
+      }
     },
     "m-350": {
       "name": "M-350",
-      "description": "M-350은 대규모 작업을 위한 강력한 솔루션입니다."
+      "description": "M-350은 대규모 작업을 위한 강력한 솔루션입니다.",
+      "visualFeatures": {
+        "section1": {
+          "title": "타이틀 입력",
+          "features": ["특징 1", "특징 2", "특징 3"]
+        },
+        "section2": {
+          "title": "타이틀 입력",
+          "features": ["특징 1", "특징 2", "특징 3"]
+        }
+      }
     },
     "m-2200": {
       "name": "M-2200",
-      "description": "M-2200은 최고의 생산성을 보장합니다."
+      "description": "M-2200은 최고의 생산성을 보장합니다.",
+      "visualFeatures": {
+        "section1": {
+          "title": "타이틀 입력",
+          "features": ["특징 1", "특징 2", "특징 3"]
+        },
+        "section2": {
+          "title": "타이틀 입력",
+          "features": ["특징 1", "특징 2", "특징 3"]
+        }
+      }
     },
     "ads-120": {
       "name": "ADS 120",
