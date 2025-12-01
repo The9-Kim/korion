@@ -45,32 +45,28 @@ export const importBrands = [
         name: "ADS 120",
         category: "import" as const,
         brand: "Fliegl",
-        subtitle: "대규모 작업 & 극도의 효율성",
-        image: "/images/main/m-2200.png"
+        image: "/images/imports/ads120_card.png"
       },
       {
         id: "ads-100",
         name: "ADS 100",
         category: "import" as const,
         brand: "Fliegl",
-        subtitle: "대규모 작업 & 극도의 효율성",
-        image: "/images/main/m-2200.png"
+        image: "/images/imports/ads100_card.png"
       },
       {
         id: "ads-60",
         name: "ADS 60",
         category: "import" as const,
         brand: "Fliegl",
-        subtitle: "대규모 작업 & 극도의 효율성",
-        image: "/images/main/m-2200.png"
+        image: "/images/imports/ads60_card.png"
       },
       {
         id: "ads-60",
         name: "ADS 60",
         category: "import" as const,
         brand: "Fliegl",
-        subtitle: "대규모 작업 & 극도의 효율성",
-        image: "/images/main/m-2200.png"
+        image: "/images/imports/others_card.png"
       }
     ]
   },
@@ -82,8 +78,7 @@ export const importBrands = [
         name: "수직믹서",
         category: "import" as const,
         brand: "BVL",
-        subtitle: "대규모 작업 & 극도의 효율성",
-        image: "/images/main/m-2200.png"
+        image: "/images/imports/bvl_card.png"
       }
     ]
   },
@@ -95,16 +90,14 @@ export const importBrands = [
         name: "배수로 굴착기",
         category: "import" as const,
         brand: "Dondi",
-        subtitle: "대규모 작업 & 극도의 효율성",
-        image: "/images/main/m-2200.png"
+        image: "/images/imports/bsr_card.png"
       },
       {
         id: "cultivator",
         name: "경운기",
         category: "import" as const,
         brand: "Dondi",
-        subtitle: "대규모 작업 & 극도의 효율성",
-        image: "/images/main/m-2200.png"
+        image: "/images/imports/gwg_card.png"
       }
     ]
   }
