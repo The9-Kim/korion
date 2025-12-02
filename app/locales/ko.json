@@ -204,7 +204,7 @@
                 }
             }
         },
-        "ads-120": {
+        "ads120": {
             "name": "ADS 120",
             "subtitle": "대규모 작업 & 극도의 효율성",
             "description": "ADS 120은 대규모 작업에<br />극도의 효율성을 위해 제작되었습니다.<br />대용량과 견고한 설계는 넓은 지역에 걸쳐<br />거름과 퇴비의 신속하고 일관된 살포를 보장합니다.<br />가장 필요할 때 타의 추종을 불허하는 생산성을 제공합니다.",
@@ -225,7 +225,7 @@
                 }
             }
         },
-        "ads-100": {
+        "ads100": {
             "name": "ADS 100",
             "visualFeatures": {
                 "section1": {
@@ -244,7 +244,7 @@
                 }
             }
         },
-        "ads-60": {
+        "ads60": {
             "name": "ADS 60",
             "visualFeatures": {
                 "section1": {
@@ -261,6 +261,26 @@
                     ]
                 }
             }
+        },
+        "others": {
+            "name": "Others",
+            "description": "Fliegl의 다양한 농업 기계 솔루션을 만나보세요.",
+            "subProducts": [
+                {
+                    "name": "탠덤 덤프 트레일러",
+                    "subtitle": "고성능 농업 운송",
+                    "description": "Fliegl TMK 140은 가장 까다로운 농업 운송 작업을 위해 제작된<br />고성능 탠덤 덤프 트레일러입니다.<br />허용 총중량 14,000kg, 최대 적재 용량 20m³ 를 갖춘 TMK 140은<br />뛰어난 안정성, 높은 덤핑 각도, 그리고 신뢰성 있는 작동 성능을 제공하여<br />농장 및 작업 현장에서 빠르고 효율적인 자재 운반을 보장합니다.",
+                    "image": "/images/imports/others-1.png",
+                    "pdf": "PDF 다운로드 하기"
+                },
+                {
+                    "name": "Maxx Line Plus 진공 탱크",
+                    "subtitle": "비료 살포작업을 위한 최고의 성능",
+                    "description": "고품질과 뛰어난 효율성이 결합된 Fliegl의 Maxx Line Plus 진공 탱크는<br />견고한 설계와 높은 가치를 자랑합니다.<br />다양한 용량(12,000리터에서 20,000리터)으로 맞춤 제작이 가능하며,<br />강력한 압축기와 옵션인 중앙 장착형 터보 필러(Turbo Filler)를 통해<br />어느 쪽에서든 빠르고 편리한 흡입 성능을 보장합니다.<br />집중적이고 전문적인 액체 비료 살포 작업을 위한 최고의 성능을 제공합니다.",
+                    "image": "/images/imports/others-2.png",
+                    "pdf": "PDF 다운로드 하기"
+                }
+            ]
         },
         "vertical-mixer": {
             "name": "수직믹서",

@@ -91,7 +91,7 @@ export default function MachinesLayout() {
               importBrands.map((brand) => {
                 // Map brand to specific product ID
                 let targetId = "";
-                if (brand.name === "Fliegl") targetId = "ads-120";
+                if (brand.name === "Fliegl") targetId = "ads120";
                 else if (brand.name === "BVL") targetId = "vertical-mixer";
                 else if (brand.name === "Dondi") targetId = "ditch-digger";
                 else targetId = brand.name.toLowerCase();

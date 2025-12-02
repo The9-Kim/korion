@@ -45,21 +45,21 @@ export const importBrands: {
     name: "Fliegl",
     products: [
       {
-        id: "ads-120",
+        id: "ads120",
         name: "ADS 120",
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/ads120_card.png"
       },
       {
-        id: "ads-100",
+        id: "ads100",
         name: "ADS 100",
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/ads100_card.png"
       },
       {
-        id: "ads-60",
+        id: "ads60",
         name: "ADS 60",
         category: "import" as const,
         brand: "Fliegl",
