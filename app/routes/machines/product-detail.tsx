@@ -89,7 +89,7 @@ export default function ProductDetail() {
                 imageCount={3} // Defaulting to 3 images for sub-products as requested (01~03)
                 useSwiper={true}
                 isReversed={!isEven}
-                pdfLabel={subProduct.pdf}
+                pdfLabel={t("machines.detail.downloadCatalog")}
               />
             );
           })}
