@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router";
 import { Trans, useTranslation } from "react-i18next";
 import { produceProducts, importBrands, type Product } from "../../data/products";
+import ImageOrText from "../../components/ui/ImageOrText";
 import ProductFeatureSection from "../../components/ProductFeatureSection";
 import ProductHero from "../../components/ProductHero";
 
@@ -97,30 +98,35 @@ export default function ProductDetail() {
 
       {/* Section 5: More Series Navigation */}
       <div className="py-32 bg-white text-center">
-        <h3 className="text-[30px] font-gothic font-bold text-brand-navy mb-16">
-          {t("machines.detail.moreSeries", { brand: product.category === 'produce' ? 'M' : product.brand })} &gt;
-        </h3>
+        {relatedProducts.length > 0 && (
+          <>
+            <h3 className="text-[30px] font-gothic font-bold text-brand-navy mb-16">
+              {t("machines.detail.moreSeries", { brand: product.category === 'produce' ? 'M' : product.brand })} &gt;
+            </h3>
 
-        <div className="flex justify-center gap-16 flex-wrap">
-          {relatedProducts.map((related) => (
-            <Link
-              key={related.id}
-              to={`/machines/${related.category === 'produce' ? 'produce' : 'imports'}/${related.id}`}
-              className="group flex flex-col items-center"
-            >
-              <div className="relative w-[162px] h-[162px] rounded-full bg-white border border-light-gray shadow-md flex items-center justify-center mb-6 overflow-hidden group-hover:border-brand-gold transition-colors duration-300">
-                {related.image ? (
-                  <img src={related.image} alt={related.name} className="w-[80%] h-[80%] object-contain" />
-                ) : (
-                  <span className="text-gray-400">{related.name}</span>
-                )}
-              </div>
-              <span className="text-[30px] font-gothic font-bold text-brand-navy group-hover:text-brand-gold transition-colors duration-300">
-                {related.name}
-              </span>
-            </Link>
-          ))}
-        </div>
+            <div className="flex justify-center gap-16 flex-wrap">
+              {relatedProducts.map((related) => (
+                <Link
+                  key={related.id}
+                  to={`/machines/${related.category === 'produce' ? 'produce' : 'imports'}/${related.id}`}
+                  className="group flex flex-col items-center"
+                >
+                  <div className="relative w-[162px] h-[162px] rounded-full bg-white border border-light-gray shadow-md flex items-center justify-center mb-6 transition-colors duration-300">
+                    <ImageOrText
+                      src={`/images/${related.category === 'produce' ? 'produce' : 'imports'}/${related.id}-circle.png`}
+                      alt={related.name}
+                      text={related.name}
+                      className="w-full h-full object-contain transition-transform duration-500 hover:scale-120"
+                    />
+                  </div>
+                  <span className="text-[30px] font-gothic font-bold text-brand-navy ">
+                    {related.name}
+                  </span>
+                </Link>
+              ))}
+            </div></>
+        )}
+
       </div>
     </div>
   );
