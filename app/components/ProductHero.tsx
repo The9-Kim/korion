@@ -39,7 +39,7 @@ export default function ProductHero({
       <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start`}>
 
         {/* Text Content */}
-        <div className="w-full z-10 pt-10 lg:pt-20 text-center lg:text-left lg:pl-8 lg:pr-8">
+        <div className={`w-full z-10 pt-10 lg:pt-20 text-center lg:text-left ${isReversed ? 'lg:px-8' : 'lg:pl-50 lg:pr-8'}`}>
           <div className="text-[20px] lg:text-[30px] font-gothic text-dark-gray mb-2 tracking-tighter">
             {subtitle}
           </div>
@@ -92,19 +92,7 @@ export default function ProductHero({
               })}
             </Swiper>
           ) : (
-            <div className={`w-full aspect-1082/586 overflow-hidden ${isReversed ? 'rounded-tr-[40px]' : 'rounded-tl-[40px]'}`}>
-              {/* Fallback or single image if swiper disabled but imageCount > 0 */}
-              {imageCount > 0 && (
-                <img
-                  src={`/images/${imageCategory}/${id}-image-01.png`}
-                  alt={`${name}`}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "https://placehold.co/1082x586?text=No+Image";
-                  }}
-                />
-              )}
-            </div>
+            <></>
           )}
         </div>
       </div>
