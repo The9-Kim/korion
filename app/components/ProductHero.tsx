@@ -1,0 +1,122 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+interface ProductHeroProps {
+  id: string;
+  category: "produce" | "import";
+  name: string;
+  subtitle: string;
+  description?: string;
+  imageCount?: number;
+  useSwiper?: boolean;
+  isReversed?: boolean; // For alternating layout
+  pdfLabel?: string;
+  onPdfClick?: () => void;
+}
+
+export default function ProductHero({
+  id,
+  category,
+  name,
+  subtitle,
+  description,
+  imageCount = 1,
+  useSwiper = true,
+  isReversed = false,
+  pdfLabel,
+  onPdfClick,
+}: ProductHeroProps) {
+  // Determine image path base
+  // e.g., /images/produce/m-4-image-01.png
+  // e.g., /images/imports/tmk-140-image-01.png
+  const imageCategory = category === "produce" ? "produce" : "imports";
+
+  return (
+    <div className="relative max-w-[1920px] mx-auto pt-20 lg:pt-32 pb-20 min-h-auto">
+      <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start`}>
+
+        {/* Text Content */}
+        <div className={`w-full lg:w-1/3 z-10 pt-10 lg:pt-20 text-center ${isReversed ? 'lg:text-right lg:pr-50' : 'lg:text-left lg:pl-50'}`}>
+          <div className="text-[20px] lg:text-[30px] font-gothic text-dark-gray mb-2 tracking-tighter">
+            {subtitle}
+          </div>
+          <h1 className="text-[40px] lg:text-[65px] font-gothic font-bold text-brand-navy leading-tight mb-4">
+            {name}
+          </h1>
+          <div className={`w-[100px] lg:w-[171px] h-[3px] bg-brand-gold-light mb-3 mx-auto ${isReversed ? 'lg:ml-auto lg:mr-0' : 'lg:mx-0'}`} />
+
+          {pdfLabel && (
+            <button
+              onClick={onPdfClick}
+              className="text-[18px] lg:text-[22px] font-gothic text-brand-navy underline hover:text-brand-gold transition-colors"
+            >
+              {pdfLabel}
+            </button>
+          )}
+        </div>
+
+        {/* Carousel / Image */}
+        <div className="lg:w-2/3 w-full mt-10 lg:mt-0 relative">
+          {/* Background Shape */}
+          <div className={`absolute top-20 w-[90%] h-[300px] lg:h-[500px] bg-light-gray -z-10 hidden lg:block ${isReversed ? 'left-0 rounded-tr-[40px]' : 'right-0 rounded-tl-[40px]'}`} />
+
+          {useSwiper ? (
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              className={`w-full aspect-1082/586 ${isReversed ? 'rounded-tr-[40px]' : 'rounded-tl-[40px]'}`}
+            >
+              {Array.from({ length: imageCount }).map((_, idx) => {
+                const num = idx + 1;
+                return (
+                  <SwiperSlide key={num} className="flex items-center justify-center">
+                    <div className="relative w-full h-full">
+                      <img
+                        src={`/images/${imageCategory}/${id}-image-0${num}.png`}
+                        alt={`${name} ${num}`}
+                        className={`w-full h-full object-cover ${isReversed ? 'rounded-tr-[40px]' : 'rounded-tl-[40px]'}`}
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = "https://placehold.co/1082x586?text=No+Image";
+                        }}
+                      />
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          ) : (
+            <div className={`w-full aspect-1082/586 overflow-hidden ${isReversed ? 'rounded-tr-[40px]' : 'rounded-tl-[40px]'}`}>
+              {/* Fallback or single image if swiper disabled but imageCount > 0 */}
+              {imageCount > 0 && (
+                <img
+                  src={`/images/${imageCategory}/${id}-image-01.png`}
+                  alt={`${name}`}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://placehold.co/1082x586?text=No+Image";
+                  }}
+                />
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Description (Optional, rendered below) */}
+      {description && (
+        <div className="max-w-4xl mx-auto px-4 pt-12 text-center">
+          <p className="text-[25px] leading-[50px] tracking-tighter font-gothic text-brand-navy break-keep">
+            <span dangerouslySetInnerHTML={{ __html: description }} />
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
