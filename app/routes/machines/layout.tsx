@@ -31,7 +31,7 @@ export default function MachinesLayout() {
 
     // 3. Default Category Hero
     if (isImports) {
-      return "/placeholder-machines-hero.jpg";
+      return "/images/imports/imports_hero.png";
     } else {
       return "/images/produce/produce_hero.png";
     }
