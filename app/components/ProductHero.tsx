@@ -39,14 +39,14 @@ export default function ProductHero({
       <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start`}>
 
         {/* Text Content */}
-        <div className={`w-full lg:w-1/3 z-10 pt-10 lg:pt-20 text-center ${isReversed ? 'lg:text-right lg:pr-50' : 'lg:text-left lg:pl-50'}`}>
+        <div className="w-full z-10 pt-10 lg:pt-20 text-center lg:text-left lg:pl-8 lg:pr-8">
           <div className="text-[20px] lg:text-[30px] font-gothic text-dark-gray mb-2 tracking-tighter">
             {subtitle}
           </div>
           <h1 className="text-[40px] lg:text-[65px] font-gothic font-bold text-brand-navy leading-tight mb-4">
             {name}
           </h1>
-          <div className={`w-[100px] lg:w-[171px] h-[3px] bg-brand-gold-light mb-3 mx-auto ${isReversed ? 'lg:ml-auto lg:mr-0' : 'lg:mx-0'}`} />
+          <div className="w-[100px] lg:w-[171px] h-[3px] bg-brand-gold-light mb-3 mx-auto lg:mx-0" />
 
           {pdfLabel && (
             <button
@@ -59,7 +59,7 @@ export default function ProductHero({
         </div>
 
         {/* Carousel / Image */}
-        <div className="lg:w-2/3 w-full mt-10 lg:mt-0 relative">
+        <div className="lg:w-2/3 w-full mt-10 lg:mt-0 relative max-w-[1082px]">
           {/* Background Shape */}
           <div className={`absolute top-20 w-[90%] h-[300px] lg:h-[500px] bg-light-gray -z-10 hidden lg:block ${isReversed ? 'left-0 rounded-tr-[40px]' : 'right-0 rounded-tl-[40px]'}`} />
 
@@ -111,7 +111,7 @@ export default function ProductHero({
 
       {/* Description (Optional, rendered below) */}
       {description && (
-        <div className="max-w-4xl mx-auto px-4 pt-12 text-center">
+        <div className="max-w-4xl mx-auto px-4 pt-50 text-center">
           <p className="text-[25px] leading-[50px] tracking-tighter font-gothic text-brand-navy break-keep">
             <span dangerouslySetInnerHTML={{ __html: description }} />
           </p>
