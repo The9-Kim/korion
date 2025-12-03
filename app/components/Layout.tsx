@@ -117,7 +117,9 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Footer Section */}
       <div className="mt-auto">
-        <img src="/images/footer-image.png" alt="" className="w-full h-auto object-cover" />
+        {location.pathname !== "/about" && (
+          <img src="/images/footer-image.png" alt="" className="w-full h-auto object-cover" />
+        )}
         <footer className="bg-gray-50 border-t border-gray-100 py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-sm text-gray-500">

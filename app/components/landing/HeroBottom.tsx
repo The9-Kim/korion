@@ -1,7 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-export default function HeroBottom() {
+interface HeroBottomProps {
+  showText?: boolean;
+}
+
+export default function HeroBottom({ showText = true }: HeroBottomProps) {
   const { t } = useTranslation();
   return (
     <section className="relative w-full py-24 2xl:py-0 2xl:h-[440px] bg-white overflow-hidden flex items-center justify-center">
@@ -10,13 +14,15 @@ export default function HeroBottom() {
         <div className="absolute inset-0 bg-white/90"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-        <h2 className="text-5xl md:text-[100px]  text-brand-navy mb-4 tracking-tight font-normal">{t("hero.title")}</h2>
-        <p className="text-2xl md:text-[50px] text-brand-blue-light mb-3">{t("hero.subtitle")}</p>
-        <p className="text-lg md:text-[40px] text-dark-gray tracking-[-3px] break-keep">
-          {t("hero.slogan")}
-        </p>
-      </div>
+      {showText && (
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
+          <h2 className="text-5xl md:text-[100px]  text-brand-navy mb-4 tracking-tight font-normal">{t("hero.title")}</h2>
+          <p className="text-2xl md:text-[50px] text-brand-blue-light mb-3">{t("hero.subtitle")}</p>
+          <p className="text-lg md:text-[40px] text-dark-gray tracking-[-3px] break-keep">
+            {t("hero.slogan")}
+          </p>
+        </div>
+      )}
     </section>
   );
 }
