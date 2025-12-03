@@ -6,7 +6,7 @@ import ProductCard from "../../components/ProductCard";
 export default function Produce() {
   const { t } = useTranslation();
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 -mb-32">
 
       {/* Intro Section */}
       <div className="text-center mb-36">
@@ -35,7 +35,7 @@ export default function Produce() {
       </div>
 
       {/* Features Grid (Check Points) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-28">
         {[
           { id: 1, title: t("machines.produce.checkpoints.1.title"), sub: t("machines.produce.checkpoints.1.sub"), img: "/images/produce/produce-1.png" },
           { id: 2, title: t("machines.produce.checkpoints.2.title"), sub: t("machines.produce.checkpoints.2.sub"), img: "/images/produce/produce-2.png" },
@@ -72,8 +72,8 @@ export default function Produce() {
       </div>
 
       {/* Product List */}
-      <div className="text-center mb-12">
-        <h3 className="text-3xl  text-brand-navy">{t("machines.produce.listTitle")}</h3>
+      <div className="text-center mb-28">
+        <h3 className="font-gothic font-bold text-[45px]  text-brand-navy">{t("machines.produce.listTitle")}</h3>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
