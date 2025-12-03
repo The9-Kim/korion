@@ -32,15 +32,15 @@ export default function About() {
           {/* Content Card */}
           <div className="w-full lg:px-50 px-8">
             <div className="relative z-10 bg-white/90 backdrop-blur-sm w-full rounded-tr-[40px] p-12 lg:p-16 text-center shadow-xl">
-              <h2 className="text-2xl lg:text-[40px] text-dark-gray tracking-tighter">
+              <h2 className="text-sm lg:text-[40px] text-dark-gray tracking-tighter">
                 {t("about.title")}
               </h2>
 
-              <div className="mt-8 mb-12 flex items-center justify-around">
+              <div className="md:mt-8 md:mb-12 my-4 flex items-center justify-around">
                 <img src="/images/logo.png" alt="Korion" className="h-10 w-auto" />
               </div>
 
-              <div className="space-y-4 text-dark-gray leading-relaxed text-sm lg:text-[25px] break-keep tracking-tighter">
+              <div className="space-y-4 text-dark-gray leading-relaxed text-sm md:text-lg lg:text-[25px] break-keep tracking-tighter">
                 <p>
                   <Trans i18nKey="about.desc1" components={{ br: <br className="hidden lg:block" /> }} />
                 </p>
@@ -54,7 +54,7 @@ export default function About() {
 
               <div className="my-8" />
 
-              <div className="space-y-4 text-dark-gray leading-relaxed text-sm lg:text-[25px] break-keep tracking-tighter">
+              <div className="space-y-4 text-dark-gray leading-relaxed text-sm md:text-lg lg:text-[25px] break-keep tracking-tighter">
                 <p>
                   <Trans i18nKey="about.desc4" components={{ br: <br className="hidden lg:block" /> }} />
                 </p>
@@ -64,12 +64,12 @@ export default function About() {
               </div>
 
               <div className="mt-12">
-                  <Link
-                    to="/contact"
-                    className="inline-block bg-brand-gold text-white px-8 py-3 rounded-md transition-colors"
-                  >
-                    {t("about.contactBtn")}
-                  </Link>
+                <Link
+                  to="/contact"
+                  className="inline-block bg-brand-gold text-white px-8 py-3 rounded-md transition-colors"
+                >
+                  {t("about.contactBtn")}
+                </Link>
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@ export default function Layout({ children }: LayoutProps) {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-secondary-900 font-aldrich">
+    <div className="min-h-screen flex flex-col bg-white font-aldrich">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
@@ -117,7 +117,7 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Footer Section */}
       <div className="mt-auto">
-        {location.pathname !== "/about" && (
+        {(location.pathname !== "/about" && location.pathname !== "/contact") && (
           <img src="/images/footer-image.png" alt="" className="w-full h-auto object-cover" />
         )}
         <footer className="bg-gray-50 border-t border-gray-100 py-12">
