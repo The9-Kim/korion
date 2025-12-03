@@ -68,10 +68,10 @@ export default function Hero({ image, video, subtitle }: HeroProps) {
         )}
 
         {/* Overlay Content (Top Left Logo) - Common for both */}
-        <div className="absolute left-40 z-10">
-          <div className="bg-black/33 p-20 inline-block rounded-br-[30px] flex flex-col justify-center px-12 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-white">
-            <img src="/images/logo.png" alt="Korion" className="h-10 w-auto brightness-0 invert mb-4" />
-            <p className="text-[40px] font-light leading-tight">{displaySubtitle}</p>
+        <div className="absolute left-0 md:left-40 top-0 z-10 w-full md:w-auto flex justify-start">
+          <div className="bg-black/33 p-6 md:p-20 inline-block rounded-br-[20px] md:rounded-br-[30px] flex flex-col justify-center px-4 md:px-12 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-white max-w-xs md:max-w-none">
+            <img src="/images/logo.png" alt="Korion" className="h-8 md:h-10 w-auto brightness-0 invert mb-4" />
+            <p className="text-xl md:text-[40px] font-light leading-tight">{displaySubtitle}</p>
           </div>
         </div>
       </section>
