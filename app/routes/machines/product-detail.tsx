@@ -41,7 +41,7 @@ export default function ProductDetail() {
         <ProductHero
           id={product.id}
           category={product.category}
-          name={product.category === 'produce' ? `KORION ${product.name}` : product.name}
+          name={product.category === 'produce' ? `KORION ${product.name}` : t(`productData.${product.id}.name`)}
           subtitle={t(`productData.${product.id}.subtitle`, product.subtitle || "")}
           description={t(`productData.${product.id}.description`)}
           imageCount={config.imageCount}
@@ -100,7 +100,7 @@ export default function ProductDetail() {
       <div className="py-32 bg-white text-center">
         {relatedProducts.length > 0 && (
           <>
-            <h3 className="text-[30px] font-gothic font-bold text-brand-navy mb-16">
+            <h3 className="text-xl lg:text-[27px] font-gothic font-bold text-brand-navy mb-16">
               {t("machines.detail.moreSeries", { brand: product.category === 'produce' ? 'M' : product.brand })} &gt;
             </h3>
 
@@ -119,7 +119,7 @@ export default function ProductDetail() {
                       className="w-full h-full object-contain transition-transform duration-500 hover:scale-120"
                     />
                   </div>
-                  <span className="text-[30px] font-gothic font-bold text-brand-navy ">
+                  <span className="text-[20px] font-gothic font-bold text-brand-navy ">
                     {related.name}
                   </span>
                 </Link>

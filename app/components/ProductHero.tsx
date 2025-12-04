@@ -3,6 +3,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Trans } from "react-i18next";
 
 interface ProductHeroProps {
   id: string;
@@ -29,9 +30,6 @@ export default function ProductHero({
   pdfLabel,
   onPdfClick,
 }: ProductHeroProps) {
-  // Determine image path base
-  // e.g., /images/produce/m-4-image-01.png
-  // e.g., /images/imports/tmk-140-image-01.png
   const imageCategory = category === "produce" ? "produce" : "imports";
 
   return (
@@ -40,10 +38,10 @@ export default function ProductHero({
 
         {/* Text Content */}
         <div className={`w-full z-10 pt-10 lg:pt-20 text-center lg:text-left ${isReversed ? 'lg:px-8' : 'lg:pl-50 lg:pr-8'}`}>
-          <div className="text-[20px] lg:text-[30px] font-gothic text-dark-gray mb-2 tracking-tighter">
+          <div className="text-sm lg:text-[20px] font-gothic text-dark-gray mb-2 tracking-tighter">
             {subtitle}
           </div>
-          <h1 className="text-[40px] lg:text-[65px] font-gothic font-bold text-brand-navy leading-tight mb-4">
+          <h1 className="text-[20px] lg:text-[35px] font-gothic font-bold text-brand-navy leading-tight mb-4">
             {name}
           </h1>
           <div className="w-[100px] lg:w-[171px] h-[3px] bg-brand-gold-light mb-3 mx-auto lg:mx-0" />
@@ -51,7 +49,7 @@ export default function ProductHero({
           {pdfLabel && (
             <button
               onClick={onPdfClick}
-              className="text-[18px] lg:text-[22px] font-gothic text-brand-navy underline hover:text-brand-gold transition-colors"
+              className="text-[16px] lg:text-[22px] font-gothic text-brand-navy underline hover:text-brand-gold transition-colors"
             >
               {pdfLabel}
             </button>
@@ -111,8 +109,8 @@ export default function ProductHero({
       {/* Description (Optional, rendered below) */}
       {description && (
         <div className="max-w-4xl mx-auto px-4 pt-50 text-center">
-          <p className="text-[25px] leading-[50px] tracking-tighter font-gothic text-brand-navy break-keep">
-            <span dangerouslySetInnerHTML={{ __html: description }} />
+          <p className="text-[13px] leading-[30px] tracking-tighter font-gothic text-brand-navy">
+            <Trans i18nKey={description} components={{ br: <br /> }} />
           </p>
         </div>
       )}

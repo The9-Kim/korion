@@ -92,7 +92,7 @@ export const importBrands: {
     products: [
       {
         id: "ditch-digger",
-        name: "배수로 조정기",
+        name: "배수로 조성기",
         category: "import" as const,
         brand: "Dondi",
         image: "/images/imports/bsr_card.png",
@@ -100,7 +100,7 @@ export const importBrands: {
       },
       {
         id: "cultivator",
-        name: "경운기",
+        name: "치즐쟁기",
         category: "import" as const,
         brand: "Dondi",
         image: "/images/imports/gwg_card.png",

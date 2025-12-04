@@ -43,7 +43,7 @@ export default function ProductFeatureSection({
         {/* Features */}
         <div className="flex flex-col gap-12 items-center">
           {features.map((feature, idx) => (
-            <div key={idx} className="text-[40px] font-gothic font-bold drop-shadow-md leading-tight">
+            <div key={idx} className="text-[27px] font-gothic font-bold drop-shadow-md leading-tight">
               {feature}
             </div>
           ))}

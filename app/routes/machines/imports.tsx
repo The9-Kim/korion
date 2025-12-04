@@ -10,7 +10,7 @@ export default function Imports() {
       {importBrands.map((brand) => (
         <div key={brand.name} className="mb-36 last:mb-0 justify-center">
           <div className="text-center mb-20">
-            <h3 className="text-[30px] font-gothic font-bold text-brand-navy">{brand.name}</h3>
+            <h3 className="text-[20px] font-gothic font-bold text-brand-navy">{brand.name}</h3>
           </div>
 
           <div className="flex flex-wrap gap-8 justify-center">

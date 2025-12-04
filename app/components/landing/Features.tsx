@@ -19,9 +19,9 @@ export default function Features() {
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-brand-gold-light text-[25px]">{t("features.badge")}</span>
-          <h2 className="text-[40px] font-gothic text-dark-gray mt-6">{t("features.title")}</h2>
-          <h3 className="text-[45px] text-brand-navy font-gothic font-extrabold mt-4">{t("features.subtitle")}</h3>
+          <span className="text-brand-gold-light lg:text-[15px] text-xs">{t("features.badge")}</span>
+          <h2 className="lg:text-[20px] text-sm font-gothic text-dark-gray mt-2">{t("features.title")}</h2>
+          <h3 className="lg:text-[27px] text-lg text-brand-navy font-gothic font-extrabold mt-2">{t("features.subtitle")}</h3>
         </div>
         <div className="items-center justify-center flex">
           <div className="grid grid-cols-1 md:grid-cols-3 bg-light-gray/30 max-w-[700px] shadow-xl">
