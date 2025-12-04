@@ -121,12 +121,11 @@ export default function Layout({ children }: LayoutProps) {
           <img src="/images/footer-image.png" alt="" className="w-full h-auto object-cover" />
         )}
         <footer className="bg-gray-50 border-t border-gray-100 py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="text-sm text-gray-500">
-              <p className="mb-2">개인정보처리방침 | 이용약관</p>
+          <div className="mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="text-[15px] text-dark-gray">
               <p>대표자 : 고성호</p>
               <p>사업자등록 번호 : 000-0000-000</p>
-              <p className="mt-2">© 2025 Korion. All rights reserved.</p>
+              <p>© 2025 Korion. All rights reserved.</p>
             </div>
             <img src="/images/logo.png" alt="Korion" className="h-5 md:h-6 w-auto" />
           </div>

@@ -9,27 +9,25 @@ export default function Produce() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 -mb-32">
 
       {/* Intro Section */}
-      <div className="text-center mb-36">
-        <span className="text-[30px] font-gothic text-dark-gray mb-2 block tracking-tighter">{t("machines.produce.intro.badge")}</span>
-        <h2 className="text-[45px] font-gothic font-bold text-brand-navy mb-8">{t("machines.produce.intro.title")}</h2>
-        <div className="w-40 h-[2px] bg-brand-gold-lighter mx-auto my-16" />
+      <div className="text-center mb-36 mt-20">
+        <span className="lg:text-[20px] text-sm font-gothic text-dark-gray mb-2 block tracking-tighter">{t("machines.produce.intro.badge")}</span>
+        <h2 className="lg:text-[27px] text-lg font-gothic font-bold text-brand-navy mb-8">
+                      <Trans i18nKey="machines.produce.intro.title" components={{ br: <br /> }} /></h2>
+        <div className="w-40 h-[3px] bg-brand-gold-light mx-auto my-16" />
 
-        <div className="mx-auto text-brand-navy break-keep text-[25px]/[50px] tracking-tight">
+        <div className="mx-auto text-brand-navy break-keep text-[13px]/[30px] tracking-tight">
           <p>
             <Trans i18nKey="machines.produce.intro.desc1" components={{ br: <br /> }} />
           </p>
         </div>
 
         <div className="flex items-center justify-center mt-24 mb-20">
-          <img src="/images/logo.png" alt="Korion" className="h-5 md:h-6 w-auto" />
+          <img src="/images/logo.png" alt="Korion" className="h-5 md:h-6 w-auto opacity-20" />
         </div>
 
-        <div className="mx-auto text-brand-navy break-keep text-[25px]/[50px] tracking-tight">
+        <div className="mx-auto text-brand-navy break-keep text-[13px]/[30px] tracking-tight">
           <p>
             <Trans i18nKey="machines.produce.intro.desc2" components={{ br: <br /> }} />
-          </p>
-          <p>
-            <Trans i18nKey="machines.produce.intro.desc3" components={{ br: <br /> }} />
           </p>
         </div>
       </div>
