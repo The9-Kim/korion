@@ -108,7 +108,7 @@ export default function ProductHero({
 
       {/* Description (Optional, rendered below) */}
       {description && (
-        <div className="max-w-4xl mx-auto px-4 pt-50 text-center">
+        <div className="max-w-4xl mx-auto px-4 pt-30 text-center">
           <p className="text-[13px] leading-[30px] tracking-tighter font-gothic text-brand-navy">
             <Trans i18nKey={description} components={{ br: <br /> }} />
           </p>
