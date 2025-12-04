@@ -31,42 +31,33 @@ export default function About() {
 
           {/* Content Card */}
           <div className="w-full lg:px-50 px-8">
-            <div className="relative z-10 bg-white/90 backdrop-blur-sm w-full rounded-tr-[40px] p-12 lg:p-16 text-center shadow-xl">
-              <h2 className="text-sm lg:text-[40px] text-dark-gray tracking-tighter">
+            <div className="relative z-10 bg-white/90 backdrop-blur-sm w-full rounded-tr-[40px] p-12 lg:p-24 text-center shadow-xl">
+              <h2 className="text-sm lg:text-[20px] font-bold font-gothic text-dark-gray tracking-tighter leading-11">
                 {t("about.title")}
               </h2>
 
               <div className="md:mt-8 md:mb-12 my-4 flex items-center justify-around">
-                <img src="/images/logo.png" alt="Korion" className="h-10 w-auto" />
+                <img src="/images/logo.png" alt="Korion" className="h-6 w-auto" />
               </div>
 
-              <div className="space-y-4 text-dark-gray leading-relaxed text-sm md:text-lg lg:text-[25px] break-keep tracking-tighter">
+              <div className="space-y-4 text-dark-gray leading-6 text-xs lg:text-[13px] break-keep tracking-tighter font-gothic">
                 <p>
                   <Trans i18nKey="about.desc1" components={{ br: <br className="hidden lg:block" /> }} />
-                </p>
-                <p>
-                  <Trans i18nKey="about.desc2" components={{ br: <br className="hidden lg:block" /> }} />
-                </p>
-                <p>
-                  <Trans i18nKey="about.desc3" components={{ br: <br className="hidden lg:block" /> }} />
                 </p>
               </div>
 
               <div className="my-8" />
 
-              <div className="space-y-4 text-dark-gray leading-relaxed text-sm md:text-lg lg:text-[25px] break-keep tracking-tighter">
+              <div className="space-y-4 text-dark-gray leading-6 text-xs lg:text-[13px] break-keep tracking-tighter font-gothic">
                 <p>
-                  <Trans i18nKey="about.desc4" components={{ br: <br className="hidden lg:block" /> }} />
-                </p>
-                <p>
-                  <Trans i18nKey="about.desc5" components={{ br: <br className="hidden lg:block" /> }} />
+                  <Trans i18nKey="about.desc2" components={{ br: <br className="hidden lg:block" /> }} />
                 </p>
               </div>
 
               <div className="mt-12">
                 <Link
                   to="/contact"
-                  className="inline-block bg-brand-gold text-white px-8 py-3 rounded-md transition-colors"
+                  className="inline-block bg-brand-gold-dark text-white text-[12px] transition-colors w-35 rounded-[10px] py-2"
                 >
                   {t("about.contactBtn")}
                 </Link>

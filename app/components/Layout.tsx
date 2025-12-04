@@ -33,7 +33,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src="/images/logo.png" alt="Korion" className="h-5 md:h-6 w-auto" />
+            <img src="/images/logo.png" alt="Korion" className="h-4 md:h-4 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
