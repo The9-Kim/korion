@@ -35,7 +35,7 @@ export default function Produce() {
       </div>
 
       {/* Features Grid (Check Points) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-28">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-28 lg:px-40">
         {[
           { id: 1, title: t("machines.produce.checkpoints.1.title"), sub: t("machines.produce.checkpoints.1.sub"), img: "/images/produce/produce-1.png" },
           { id: 2, title: t("machines.produce.checkpoints.2.title"), sub: t("machines.produce.checkpoints.2.sub"), img: "/images/produce/produce-2.png" },
@@ -51,18 +51,17 @@ export default function Produce() {
             </div>
 
             {/* Top Content: Check Point */}
-            <div className="absolute top-8 left-8 z-10">
-              <div className="text-brand-gold-lighter text-[30px] leading-none tracking-[-3px]">Check</div>
-              <div className="text-brand-gold-lighter text-[30px] leading-none tracking-[-3px]">Point .0{item.id}</div>
+            <div className="absolute top-8 left-6 z-10">
+              <div className="text-brand-gold-lighter text-sm leading-none tracking-[-1px]">Check Point .0{item.id}</div>
             </div>
 
             {/* Bottom Content: Overlay */}
-            <div className="absolute bottom-0 left-0 w-full bg-dark-gray/70 rounded-tr-[40px] p-8 min-h-[140px]">
-              <div className="text-white text-[28px] font-bold font-gothic leading-tight break-keep">
+            <div className="absolute bottom-0 left-0 w-full bg-dark-gray/70 rounded-tr-[40px] p-8 min-h-[80px]">
+              <div className="text-white text-[15px] font-bold font-gothic leading-tight break-keep">
                 <Trans i18nKey={item.title} components={{ br: <br /> }} />
               </div>
               {item.sub && (
-                <div className="text-white text-[28px] font-bold font-gothic leading-tight mt-1 break-keep">
+                <div className="text-white text-[15px] font-bold font-gothic leading-tight mt-1 break-keep">
                   <Trans i18nKey={item.sub} components={{ br: <br /> }} />
                 </div>
               )}
