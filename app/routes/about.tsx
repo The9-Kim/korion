@@ -18,10 +18,8 @@ export default function About() {
     <Layout>
       <div className="relative bg-white">
         <Hero image="/images/produce/m-4_hero.png" />
-        <HeroBottom showText={false} />
-
         <div
-          className="absolute top-0 left-0 w-full min-h-[calc(100vh-80px)] flex items-center justify-center py-20 px-0 z-20"
+          className="absolute top-0 left-0 w-full min-h-[calc(100vh-80px)] flex items-center justify-center px-0 z-20"
         >
           {/* Background Image Placeholder */}
           <div className="absolute inset-0 bg-secondary-200">
