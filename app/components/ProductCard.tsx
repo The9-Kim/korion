@@ -49,7 +49,7 @@ export default function ProductCard({ id, name, image, to, subtitle, category, c
     </>
   );
 
-  const containerClasses = `relative aspect-[3/4] rounded-[60px] overflow-hidden group cursor-pointer transition-transform duration-500 hover:scale-110 block shadow-md/50 ${className || ""}`;
+  const containerClasses = `relative aspect-[3/4] rounded-[60px] overflow-hidden group cursor-pointer transition-transform transition-colors transition-all duration-300 hover:scale-110 block shadow-md/50 hover:border-2 hover:border-brand-gold-lighter/60 ${className || ""}`;
 
   if (to) {
     return (
