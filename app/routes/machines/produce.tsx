@@ -33,44 +33,46 @@ export default function Produce() {
       </div>
 
       {/* Features Grid (Check Points) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-28 lg:px-40">
-        {[
-          { id: 1, title: t("machines.produce.checkpoints.1.title"), sub: t("machines.produce.checkpoints.1.sub"), img: "/images/produce/produce-1.png" },
-          { id: 2, title: t("machines.produce.checkpoints.2.title"), sub: t("machines.produce.checkpoints.2.sub"), img: "/images/produce/produce-2.png" },
-          { id: 3, title: t("machines.produce.checkpoints.3.title"), sub: t("machines.produce.checkpoints.3.sub"), img: "/images/produce/produce-3.png" },
-          { id: 4, title: t("machines.produce.checkpoints.4.title"), sub: t("machines.produce.checkpoints.4.sub"), img: "/images/produce/produce-4.png" },
-          { id: 5, title: t("machines.produce.checkpoints.5.title"), sub: t("machines.produce.checkpoints.5.sub"), img: "/images/produce/produce-5.png" },
-          { id: 6, title: t("machines.produce.checkpoints.6.title"), sub: t("machines.produce.checkpoints.6.sub"), img: "/images/produce/produce-6.png" },
-        ].map((item) => (
-          <div key={item.id} className="relative w-full aspect-316/408 overflow-hidden shadow-md/30 group rounded-tr-[40px]">
-            {/* Background Image */}
-            <div className="absolute inset-0">
-              <img src={item.img} alt={item.title} className="w-full h-full object-contain transition-transform duration-500" />
-            </div>
-
-            {/* Top Content: Check Point */}
-            <div className="absolute top-8 left-6 z-10">
-              <div className="text-brand-gold-lighter text-sm leading-none tracking-[-1px]">Check Point .0{item.id}</div>
-            </div>
-
-            {/* Bottom Content: Overlay */}
-            <div className="absolute bottom-0 left-0 w-full bg-dark-gray/70 rounded-tr-[40px] p-8 min-h-[106px]">
-              <div className="text-white text-[15px] font-bold font-gothic leading-tight break-keep">
-                <Trans i18nKey={item.title} components={{ br: <br /> }} />
+      <div className="flex justify-center w-full mb-28">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:px-40 max-w-[1040px] w-full">
+          {[
+            { id: 1, title: t("machines.produce.checkpoints.1.title"), sub: t("machines.produce.checkpoints.1.sub"), img: "/images/produce/produce-1.png" },
+            { id: 2, title: t("machines.produce.checkpoints.2.title"), sub: t("machines.produce.checkpoints.2.sub"), img: "/images/produce/produce-2.png" },
+            { id: 3, title: t("machines.produce.checkpoints.3.title"), sub: t("machines.produce.checkpoints.3.sub"), img: "/images/produce/produce-3.png" },
+            { id: 4, title: t("machines.produce.checkpoints.4.title"), sub: t("machines.produce.checkpoints.4.sub"), img: "/images/produce/produce-4.png" },
+            { id: 5, title: t("machines.produce.checkpoints.5.title"), sub: t("machines.produce.checkpoints.5.sub"), img: "/images/produce/produce-5.png" },
+            { id: 6, title: t("machines.produce.checkpoints.6.title"), sub: t("machines.produce.checkpoints.6.sub"), img: "/images/produce/produce-6.png" },
+          ].map((item) => (
+            <div key={item.id} className="relative w-full aspect-316/408 overflow-hidden shadow-md/30 group rounded-tr-[40px]">
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img src={item.img} alt={item.title} className="w-full h-full object-contain transition-transform duration-500" />
               </div>
-              {item.sub && (
-                <div className="text-white text-[15px] font-bold font-gothic leading-tight mt-1 break-keep">
-                  <Trans i18nKey={item.sub} components={{ br: <br /> }} />
+
+              {/* Top Content: Check Point */}
+              <div className="absolute top-6 left-2 z-10">
+                <div className="text-brand-gold-lighter text-[12px] leading-none tracking-[-1px]">Check Point .0{item.id}</div>
+              </div>
+
+              {/* Bottom Content: Overlay */}
+              <div className="absolute bottom-0 left-0 w-full bg-dark-gray/70 rounded-tr-[40px] pl-2 py-8 min-h-[113px]">
+                <div className="text-white text-[15px] font-bold font-gothic leading-tighter break-keep">
+                  <Trans i18nKey={item.title} components={{ br: <br /> }} />
                 </div>
-              )}
+                {item.sub && (
+                  <div className="text-white text-[15px] font-bold font-gothic leading-tighter mt-1 break-keep">
+                    <Trans i18nKey={item.sub} components={{ br: <br /> }} />
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Product List */}
-      <div className="text-center mb-28">
-        <h3 className="font-gothic font-bold text-[45px] text-brand-navy">{t("machines.produce.listTitle")}</h3>
+      <div className="text-center mb-20">
+        <h3 className="font-gothic font-bold text-[27px] text-brand-navy">{t("machines.produce.listTitle")}</h3>
       </div>
       <div className="flex justify-center w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl">
