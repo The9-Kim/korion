@@ -8,8 +8,7 @@ interface ImageOrTextProps {
 }
 
 export default function ImageOrText({ src, alt, text, className }: ImageOrTextProps) {
-  const [error, setError] = useState(false);
-  if (error) {
+  if (text === 'M-2200') {
     return <span className="font-gothic font-bold text-[50px] text-brand-blue-light leading-[50px] transition-transform duration-500 hover:scale-120">{text}</span>;
   }
   return (
@@ -17,7 +16,6 @@ export default function ImageOrText({ src, alt, text, className }: ImageOrTextPr
       src={src}
       alt={alt}
       className={className}
-      onError={() => setError(true)}
     />
   );
 }
