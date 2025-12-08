@@ -30,14 +30,14 @@ export default function ProductCard({ id, name, image, to, subtitle, category, c
       </div>
 
       {/* Overlay Box */}
-      <div className="absolute bottom-16 left-0 w-full bg-black/50 px-6 pt-24 pb-4">
+      <div className="absolute bottom-8 left-0 w-full bg-black/50 px-6 pt-20 pb-4">
         <div className="w-22 h-[6px] bg-brand-gold-lighter" />
-        <h3 className={`text-[40px] text-white mb-0 ${nameFont === 'gothic' ? 'font-gothic font-bold' : ''}`}>{name}</h3>
+        <h3 className={`text-[26px] text-white mb-0 ${nameFont === 'gothic' ? 'font-gothic font-bold' : ''}`}>{name}</h3>
         <div className="flex flex-wrap justify-between items-center gap-y-1">
-          <p className="text-[15px] text-white whitespace-nowrap">
+          <p className="text-[12px] text-white whitespace-nowrap">
             {subtitle || (category === 'produce' ? "Korion M Series" : "")}
           </p>
-          <button className="bg-brand-gold-lighter text-black px-1.5 py-0.5 rounded-full text-[10px] font-gothic font-bold hover:bg-white transition-colors flex items-center">
+          <button className="bg-brand-gold-lighter text-black px-1.5 py-0.5 rounded-full text-[8px] font-gothic font-bold hover:bg-white transition-colors flex items-center">
             {t("products.more")}
             <svg className="w-3 h-3 ml-[1px]" viewBox="0 0 24 24" fill="currentColor">
               <path d="M5 3l14 9-14 9V3z" />
@@ -45,6 +45,7 @@ export default function ProductCard({ id, name, image, to, subtitle, category, c
           </button>
         </div>
       </div>
+
     </>
   );
 

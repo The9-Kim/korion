@@ -70,20 +70,23 @@ export default function Produce() {
 
       {/* Product List */}
       <div className="text-center mb-28">
-        <h3 className="font-gothic font-bold text-[45px]  text-brand-navy">{t("machines.produce.listTitle")}</h3>
+        <h3 className="font-gothic font-bold text-[45px] text-brand-navy">{t("machines.produce.listTitle")}</h3>
       </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {produceProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            id={product.id}
-            name={product.name}
-            image={product.image}
-            to={`/machines/produce/${product.id}`}
-            nameFont={product.nameFont}
-          />
-        ))}
+      <div className="flex justify-center w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl">
+          {produceProducts.map((product) => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              name={product.name}
+              image={product.image}
+              category={product.category}
+              to={`/machines/produce/${product.id}`}
+              nameFont={product.nameFont}
+              className="w-[217px] h-[285px] mx-auto"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

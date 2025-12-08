@@ -23,8 +23,9 @@ export default function Imports() {
                 to={`/machines/imports/${product.id}`}
                 category="imports"
                 subtitle={product.brand}
-                className="w-full sm:w-[calc(50%-2rem)] lg:w-[calc(25%-2rem)] max-w-[320px]"
+                className="w-[217px] h-[285px] mx-2"
                 nameFont={product.nameFont}
+                
               />
             ))}
           </div>
