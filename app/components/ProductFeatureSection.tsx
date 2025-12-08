@@ -31,7 +31,7 @@ export default function ProductFeatureSection({
         {/* Title */}
         {title && (
           <div className="flex flex-col items-center">
-            <div className="text-[25px] font-gothic drop-shadow-md leading-tight">
+            <div className="text-lg lg:text-[25px] font-gothic drop-shadow-md leading-tight">
               {title}
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function ProductFeatureSection({
         {/* Features */}
         <div className="flex flex-col gap-12 items-center">
           {features.map((feature, idx) => (
-            <div key={idx} className="text-[27px] font-gothic font-bold drop-shadow-md leading-tight">
+            <div key={idx} className="text-lg lg:text-[27px] font-gothic font-bold drop-shadow-md leading-tight">
               {feature}
             </div>
           ))}
