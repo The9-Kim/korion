@@ -111,7 +111,7 @@ export default function ProductDetail() {
                   to={`/machines/${related.category === 'produce' ? 'produce' : 'imports'}/${related.id}`}
                   className="group flex flex-col items-center"
                 >
-                  <div className="relative w-[162px] h-[162px] rounded-full bg-white border border-light-gray shadow-md flex items-center justify-center mb-6 transition-colors duration-300">
+                  <div className="relative w-[72px] h-[72px] rounded-full bg-white border border-light-gray shadow-md flex items-center justify-center mb-6 transition-colors duration-300">
                     <ImageOrText
                       src={`/images/${related.category === 'produce' ? 'produce' : 'imports'}/${related.id}-circle.png`}
                       alt={related.name}
