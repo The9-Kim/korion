@@ -66,7 +66,7 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Actions & Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:block bg-brand-navy text-white px-15 py-[10px] text-[20px]  hover:bg-brand-navy-hover transition-colors rounded-sm">
+            <button className="hidden md:block bg-brand-navy text-white px-9 py-[6px] text-[12px]  hover:bg-brand-navy-hover transition-colors rounded-sm">
               {t("nav.catalogue")}
             </button>
             <button className="w-8 h-8 flex items-center justify-center text-brand-gold">

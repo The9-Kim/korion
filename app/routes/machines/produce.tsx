@@ -54,7 +54,7 @@ export default function Produce() {
             </div>
 
             {/* Bottom Content: Overlay */}
-            <div className="absolute bottom-0 left-0 w-full bg-dark-gray/70 rounded-tr-[40px] p-8 min-h-[80px]">
+            <div className="absolute bottom-0 left-0 w-full bg-dark-gray/70 rounded-tr-[40px] p-8 min-h-[106px]">
               <div className="text-white text-[15px] font-bold font-gothic leading-tight break-keep">
                 <Trans i18nKey={item.title} components={{ br: <br /> }} />
               </div>
