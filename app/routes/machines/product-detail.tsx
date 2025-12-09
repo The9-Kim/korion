@@ -22,6 +22,7 @@ export default function ProductDetail() {
 
   // Product Configuration
   const productConfig: Record<string, { useSwiper: boolean; imageCount: number; showFeatures: boolean }> = {
+    "m-350": { useSwiper: true, imageCount: 6, showFeatures: true },
     "m-2200": { useSwiper: false, imageCount: 1, showFeatures: false },
     "others": { useSwiper: true, imageCount: 0, showFeatures: false },
     // Default for others
@@ -64,13 +65,13 @@ export default function ProductDetail() {
 
           {/* Section 4: Visual Feature 2 (조건부) */}
           {(() => {
-              let section2Features = t(`productData.${product.id}.visualFeatures.section2.features`, { returnObjects: true });
-              if (!Array.isArray(section2Features)) {
-                return null;
-              }
-              
-              const section2Title = t(`productData.${product.id}.visualFeatures.section2.title`, "");
-              return section2Features.length > 0 ? (
+            let section2Features = t(`productData.${product.id}.visualFeatures.section2.features`, { returnObjects: true });
+            if (!Array.isArray(section2Features)) {
+              return null;
+            }
+
+            const section2Title = t(`productData.${product.id}.visualFeatures.section2.title`, "");
+            return section2Features.length > 0 ? (
               <ProductFeatureSection
                 backgroundImage={`/images/${product?.category === 'produce' ? 'produce' : 'imports'}/${product?.id}-feature-02.png`}
                 className="bg-black"
