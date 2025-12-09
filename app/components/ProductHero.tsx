@@ -73,15 +73,7 @@ export default function ProductHero({
               }}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               className={`w-full aspect-1082/586 ${isReversed ? 'rounded-tr-[40px]' : 'rounded-tl-[40px]'}`}
-              style={{
-                "--swiper-navigation-color": "#fff",
-                "--swiper-pagination-color": "#fff",
-              } as React.CSSProperties}
             >
-              <style>{`
-                .swiper-button-prev { left: 30px !important; }
-                .swiper-button-next { right: 30px !important; }
-              `}</style>
               {Array.from({ length: imageCount }).map((_, idx) => {
                 const num = idx + 1;
                 return (
