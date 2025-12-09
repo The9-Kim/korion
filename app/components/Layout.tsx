@@ -125,7 +125,7 @@ export default function Layout({ children }: LayoutProps) {
             "/machines/imports/fliegl",
             "/machines/imports/dondi"
           ];
-          console.log('location.pathname:', location.pathname);
+
           return !noFooterImagePaths.includes(location.pathname) && (
             <img src="/images/footer-image.png" alt="" className="w-full h-auto object-cover" />
           );
