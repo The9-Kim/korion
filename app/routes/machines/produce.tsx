@@ -12,7 +12,7 @@ export default function Produce() {
       <div className="text-center mb-36 mt-20">
         <span className="lg:text-[20px] text-sm font-gothic text-dark-gray mb-2 block tracking-tighter">{t("machines.produce.intro.badge")}</span>
         <h2 className="lg:text-[27px] text-lg font-gothic font-bold text-brand-navy mb-8">
-                      <Trans i18nKey="machines.produce.intro.title" components={{ br: <br /> }} /></h2>
+          <Trans i18nKey="machines.produce.intro.title" components={{ br: <br /> }} /></h2>
         <div className="w-40 h-[3px] bg-brand-gold-light mx-auto my-16" />
 
         <div className="mx-auto text-brand-navy break-keep text-[17px]/[30px] tracking-tight">
@@ -36,18 +36,25 @@ export default function Produce() {
       <div className="flex justify-center w-full mb-28">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:px-40 max-w-[1040px] w-full">
           {[
-            { id: 1, title: t("machines.produce.checkpoints.1.title"), sub: t("machines.produce.checkpoints.1.sub"), img: "/images/produce/produce-1.png" },
-            { id: 2, title: t("machines.produce.checkpoints.2.title"), sub: t("machines.produce.checkpoints.2.sub"), img: "/images/produce/produce-2.png" },
+            { id: 1, title: t("machines.produce.checkpoints.1.title"), sub: t("machines.produce.checkpoints.1.sub"), video: "/images/produce/produce-1.mp4" },
+            { id: 2, title: t("machines.produce.checkpoints.2.title"), sub: t("machines.produce.checkpoints.2.sub"), video: "/images/produce/produce-2.mp4" },
             { id: 3, title: t("machines.produce.checkpoints.3.title"), sub: t("machines.produce.checkpoints.3.sub"), img: "/images/produce/produce-3.png" },
-            { id: 4, title: t("machines.produce.checkpoints.4.title"), sub: t("machines.produce.checkpoints.4.sub"), img: "/images/produce/produce-4.png" },
-            { id: 5, title: t("machines.produce.checkpoints.5.title"), sub: t("machines.produce.checkpoints.5.sub"), img: "/images/produce/produce-5.png" },
+            { id: 4, title: t("machines.produce.checkpoints.4.title"), sub: t("machines.produce.checkpoints.4.sub"), video: "/images/produce/produce-4.mp4" },
+            { id: 5, title: t("machines.produce.checkpoints.5.title"), sub: t("machines.produce.checkpoints.5.sub"), video: "/images/produce/produce-5.mp4" },
             { id: 6, title: t("machines.produce.checkpoints.6.title"), sub: t("machines.produce.checkpoints.6.sub"), img: "/images/produce/produce-6.png" },
           ].map((item) => (
             <div key={item.id} className="relative w-full aspect-316/408 overflow-hidden shadow-md/30 group rounded-tr-[40px]">
               {/* Background Image */}
-              <div className="absolute inset-0">
-                <img src={item.img} alt={item.title} className="w-full h-full object-contain transition-transform duration-500" />
-              </div>
+              {item.img && (
+                <div className="absolute inset-0">
+                  <img src={item.img} alt={item.title} className="w-full h-full object-contain transition-transform duration-500" />
+                </div>
+              )}
+              {item.video && (
+                <div className="absolute inset-0">
+                  <video src={item.video} autoPlay loop muted className="w-full h-full object-cover transition-transform duration-500" />
+                </div>
+              )}
 
               {/* Top Content: Check Point */}
               <div className="absolute top-6 left-2 z-10">
