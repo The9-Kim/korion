@@ -23,6 +23,7 @@ export default function Fliegl() {
             subtitle={t(`productData.${product.id}.landingSubtitle`)}
             description={`productData.${product.id}.landingDescription`}
             isReversed={isReversed}
+            to={`/machines/imports/${product.id}`}
           />
         );
       })}
