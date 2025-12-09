@@ -2,6 +2,11 @@ import { Link } from "react-router";
 import { useTranslation, Trans } from "react-i18next";
 import { produceProducts } from "../../data/products";
 import ProductCard from "../../components/ProductCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function Produce() {
   const { t } = useTranslation();
@@ -78,23 +83,48 @@ export default function Produce() {
       </div>
 
       {/* Product List */}
-      <div className="text-center mb-20">
+      <div className="text-center">
         <h3 className="font-gothic font-bold text-[27px] text-brand-navy">{t("machines.produce.listTitle")}</h3>
       </div>
-      <div className="flex justify-center w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl">
-          {produceProducts.map((product) => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              name={product.name}
-              image={product.image}
-              category={product.category}
-              to={`/machines/produce/${product.id}`}
-              nameFont={product.nameFont}
-              className="w-[217px] h-[285px] mx-auto"
-            />
-          ))}
+      <div className="py-10 bg-white mb-20 relative z-0">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            pagination={{
+              clickable: true,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            loop
+            className="py-10! px-6!"
+          >
+            {produceProducts.map((product) => (
+              <SwiperSlide key={product.id}>
+                <ProductCard
+                  id={product.id}
+                  name={product.name}
+                  image={product.image}
+                  category={product.category}
+                  subtitle={product.category === 'import' ? product.brand : undefined}
+                  to={`/machines/${product.category === "produce" ? "produce" : "imports"}/${product.id}`}
+                  nameFont={product.nameFont}
+                  className="w-full max-w-[300px] mx-auto"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>
