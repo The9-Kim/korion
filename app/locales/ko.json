@@ -168,11 +168,11 @@
             "visualFeatures": {
                 "section1": {
                     "title": "4개의 드럼을 갖춘 다용도성 제공",
-                    "features": ["4열", "최대 3.5m"]
-                },
-                "section2": {
-                    "title": "중소 규모 농가에 완벽하고 합리적 선택",
-                    "features": ["180-240 HP", "Alpha 또는 Beta 버전"]
+                    "features": [
+                        "작업폭 : 최대 3.5m",
+                        "사용 트랙터 : 180-240 HP",
+                        "자체유압펌프식 옵션 장착가능 [Alpha & Beta 버전]"
+                    ]
                 }
             }
         },

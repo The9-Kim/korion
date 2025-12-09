@@ -62,14 +62,24 @@ export default function ProductDetail() {
             features={t(`productData.${product.id}.visualFeatures.section1.features`, { returnObjects: true }) as string[]}
           />
 
-          {/* Section 4: Visual Feature 2 */}
-          <ProductFeatureSection
-            backgroundImage={`/images/${product?.category === 'produce' ? 'produce' : 'imports'}/${product?.id}-feature-02.png`}
-            className="bg-black"
-            title={t(`productData.${product.id}.visualFeatures.section2.title`, "")}
-            withUnderline
-            features={t(`productData.${product.id}.visualFeatures.section2.features`, { returnObjects: true }) as string[]}
-          />
+          {/* Section 4: Visual Feature 2 (조건부) */}
+          {(() => {
+              let section2Features = t(`productData.${product.id}.visualFeatures.section2.features`, { returnObjects: true });
+              if (!Array.isArray(section2Features)) {
+                return null;
+              }
+              
+              const section2Title = t(`productData.${product.id}.visualFeatures.section2.title`, "");
+              return section2Features.length > 0 ? (
+              <ProductFeatureSection
+                backgroundImage={`/images/${product?.category === 'produce' ? 'produce' : 'imports'}/${product?.id}-feature-02.png`}
+                className="bg-black"
+                title={section2Title}
+                withUnderline
+                features={section2Features as string[]}
+              />
+            ) : null;
+          })()}
         </>
       )}
 
