@@ -10,6 +10,8 @@ export default [
     route("produce", "routes/machines/produce.tsx", { id: "machines-produce" }), // Explicit ID
     route("produce/:id", "routes/machines/product-detail.tsx", { id: "produce-detail" }),
     route("imports", "routes/machines/imports.tsx", { id: "machines-imports" }),
+    route("imports/fliegl", "routes/machines/imports.fliegl.tsx", { id: "machines-imports-fliegl" }),
+    route("imports/dondi", "routes/machines/imports.dondi.tsx", { id: "machines-imports-dondi" }),
     route("imports/:id", "routes/machines/product-detail.tsx", { id: "imports-detail" }),
   ]),
 ] satisfies RouteConfig;

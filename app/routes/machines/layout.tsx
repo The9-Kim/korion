@@ -91,9 +91,9 @@ export default function MachinesLayout() {
               importBrands.map((brand) => {
                 // Map brand to specific product ID
                 let targetId = "";
-                if (brand.name === "Fliegl") targetId = "ads120";
+                if (brand.name === "Fliegl") targetId = "fliegl";
                 else if (brand.name === "BVL") targetId = "vertical-mixer";
-                else if (brand.name === "Dondi") targetId = "ditch-digger";
+                else if (brand.name === "Dondi") targetId = "dondi";
                 else targetId = brand.name.toLowerCase();
 
                 return (
@@ -102,8 +102,8 @@ export default function MachinesLayout() {
                     to={`/machines/imports/${targetId}`}
                     className={clsx(
                       "cursor-pointer hover:text-brand-navy transition-colors",
-                      // Check if the current path includes any of the brand's products
-                      brand.products.some(p => p.id === currentId) && "text-brand-navy font-bold"
+                      // Check if the current path includes any of the brand's products OR matches the brand name
+                      (currentId === targetId || brand.products.some(p => p.id === currentId)) && "text-brand-navy font-bold"
                     )}
                   >
                     {brand.name}
