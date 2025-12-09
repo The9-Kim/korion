@@ -40,8 +40,8 @@ export default function Produce() {
             { id: 2, title: t("machines.produce.checkpoints.2.title"), sub: t("machines.produce.checkpoints.2.sub"), video: "/images/produce/produce-2.mp4" },
             { id: 3, title: t("machines.produce.checkpoints.3.title"), sub: t("machines.produce.checkpoints.3.sub"), img: "/images/produce/produce-3.png" },
             { id: 4, title: t("machines.produce.checkpoints.4.title"), sub: t("machines.produce.checkpoints.4.sub"), video: "/images/produce/produce-4.mp4" },
-            { id: 5, title: t("machines.produce.checkpoints.5.title"), sub: t("machines.produce.checkpoints.5.sub"), video: "/images/produce/produce-5.mp4" },
-            { id: 6, title: t("machines.produce.checkpoints.6.title"), sub: t("machines.produce.checkpoints.6.sub"), img: "/images/produce/produce-6.png" },
+            { id: 5, title: t("machines.produce.checkpoints.5.title"), sub: t("machines.produce.checkpoints.5.sub"), img: "/images/produce/produce-5.jpg" },
+            { id: 6, title: t("machines.produce.checkpoints.6.title"), sub: t("machines.produce.checkpoints.6.sub"), video: "/images/produce/produce-6.mp4" },
           ].map((item) => (
             <div key={item.id} className="relative w-full aspect-316/408 overflow-hidden shadow-md/30 group rounded-tr-[40px]">
               {/* Background Image */}
