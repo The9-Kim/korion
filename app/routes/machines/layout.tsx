@@ -23,6 +23,10 @@ export default function MachinesLayout() {
       return `/images/produce/${currentId}-image-01.png`;
     }
 
+    if (isImports && (currentId === "fliegl" || currentId === "dondi")) {
+      return `/images/imports/fliegl_landing.png`;
+    }
+
     // 2. Check for specific Import Brand Hero
     if (isImports && currentId) {
       // Example: /images/imports/fliegl_hero.png
