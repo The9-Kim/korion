@@ -16,9 +16,11 @@ export default function HeroBottom({ showText = true }: HeroBottomProps) {
 
       {showText && (
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-5xl md:text-[70px]  text-brand-navy mb-6 tracking-tight font-normal">{t("hero.title")}</h2>
+          <div className="flex items-center justify-center mb-8">
+            <img src="/images/logo.png" alt="Korion" className="h-6 md:h-6 w-auto" />
+          </div>
           <p className="text-2xl md:text-[35px] text-brand-blue-light mb-6">{t("hero.subtitle")}</p>
-          <p className="text-lg md:text-[25px] text-dark-gray tracking-[-3px] break-keep">
+          <p className="text-lg md:text-[25px] text-dark-gray break-keep">
             {t("hero.slogan")}
           </p>
         </div>

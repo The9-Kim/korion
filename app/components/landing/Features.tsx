@@ -1,5 +1,6 @@
 import React from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { Link } from "react-router";
 
 
 
@@ -21,21 +22,33 @@ export default function Features() {
         <div className="text-center mb-16">
           <span className="text-brand-gold-light lg:text-[15px] text-xs">{t("features.badge")}</span>
           <h2 className="lg:text-[20px] text-sm font-gothic text-dark-gray mt-2">{t("features.title")}</h2>
-          <h3 className="lg:text-[27px] text-lg text-brand-navy font-gothic font-extrabold mt-2">{t("features.subtitle")}</h3>
+          <h3 className="lg:text-[27px] text-lg text-brand-navy font-gothic font-extrabold mt-3">{t("features.subtitle")}</h3>
         </div>
-        <div className="items-center justify-center flex">
-          <div className="grid grid-cols-1 md:grid-cols-3 bg-light-gray/30 max-w-[700px] shadow-xl">
-            {features.map((feature) => (
-              <div key={feature.id} className="h-[184px] flex flex-col items-center border border-white group py-5">
-                <div className="w-24 h-24 rounded-full flex flex-col items-center justify-center mb-4 shadow-sm bg-white">
-                  <span className="text-brand-gold-lighter text-[15px]/[20px] font-gothic font-bold">Check</span>
-                  <span className="text-brand-gold-lighter text-[15px]/[20px] font-gothic font-bold">Point.0{feature.id}</span>
-                </div>
-                <h4 className="font-gothic font-bold text-[14px]/[17px] text-brand-navy break-keep text-center px-8">
-                  <Trans i18nKey={feature.desc} components={{ br: <br /> }} />
-                </h4>
-              </div>
-            ))}
+        <div className="items-center justify-center flex flex-col">
+          <h2 className="text-sm lg:text-[20px] font-bold font-gothic text-dark-gray tracking-tighter leading-11">
+            {t("about.title")}
+          </h2>
+
+          <div className="md:mt-8 md:mb-12 my-5 flex items-center justify-around">
+            <img src="/images/logo.png" alt="Korion" className="h-6 w-auto opacity-35" />
+          </div>
+
+          <div className="my-4 text-dark-gray leading-6 text-xs lg:text-[17px]/8 break-keep tracking-tighter font-gothic">
+            <p className="text-center">
+              <Trans i18nKey="about.desc1" components={{ br: <br className="hidden lg:block" /> }} />
+            </p>
+            <p className="text-center mt-12">
+              <Trans i18nKey="about.desc2" components={{ br: <br className="hidden lg:block" /> }} />
+            </p>
+          </div>
+
+          <div className="mt-12">
+            <Link
+              to="/contact"
+              className="inline-block bg-brand-gold-dark text-white text-[12px] transition-colors w-35 rounded-[10px] py-2 text-center"
+            >
+              {t("about.contactBtn")}
+            </Link>
           </div>
         </div>
       </div>
