@@ -52,7 +52,7 @@ export default function Produce() {
               )}
               {item.video && (
                 <div className="absolute inset-0">
-                  <video src={item.video} autoPlay loop muted className="w-full h-full object-cover transition-transform duration-500" />
+                  <video src={item.video} playsInline autoPlay loop muted className="w-full h-full object-cover transition-transform duration-500" />
                 </div>
               )}
 
