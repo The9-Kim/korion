@@ -26,6 +26,7 @@ export default function ProductDetail() {
     "m-350": { useSwiper: true, imageCount: 6, showFeatures: true },
     "m-2200": { useSwiper: false, imageCount: 1, showFeatures: false },
     "others": { useSwiper: true, imageCount: 0, showFeatures: false },
+    "ditch-digger": { useSwiper: true, imageCount: 8, showFeatures: true },
     // Default for others
     "default": { useSwiper: true, imageCount: 4, showFeatures: true },
   };

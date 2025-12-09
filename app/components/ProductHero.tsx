@@ -31,7 +31,8 @@ export default function ProductHero({
   onPdfClick,
 }: ProductHeroProps) {
   const imageCategory = category === "produce" ? "produce" : "imports";
-
+  const autoplay = id === "ads60" || id === 'ditch-digger' ? false : { delay: 3000, disableOnInteraction: false };
+  
   return (
     <div className="relative max-w-[1920px] mx-auto pt-20 lg:pt-32 pb-20 min-h-auto">
       <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start`}>
@@ -71,7 +72,7 @@ export default function ProductHero({
               pagination={{
                 clickable: true,
               }}
-              autoplay={id === "ads60" ? false : { delay: 3000, disableOnInteraction: false }}
+              autoplay={autoplay}
               className={`w-full aspect-1082/586 ${isReversed ? 'rounded-tr-[40px]' : 'rounded-tl-[40px]'}`}
               onSlideChange={(swiper) => {
                 // Pause all videos
@@ -104,6 +105,24 @@ export default function ProductHero({
                 }
               }}
             >
+              {id === 'ditch-digger' && (
+                <SwiperSlide className="flex items-center justify-center">
+                  <div className="relative w-full h-full bg-black">
+                    <video
+                      className={`w-full h-full object-cover ${isReversed ? "rounded-tr-[40px]" : "rounded-tl-[40px]"
+                        }`}
+                      controls
+                      muted
+                      playsInline
+                    >
+                      <source
+                        src="/images/imports/ditch-digger-video-01.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                </SwiperSlide>
+              )}
               {id === "ads60" && (
                 <>
                   <SwiperSlide className="flex items-center justify-center">
