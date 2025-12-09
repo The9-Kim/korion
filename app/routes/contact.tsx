@@ -29,7 +29,7 @@ export default function Contact() {
               <div className="space-y-6 text-gray-700">
                 <div className="flex items-center gap-4">
                   <img src="/images/icons/email_icon.png" alt="email" width={32} height={32} className="shrink-0" />
-                  <span className="font-gothic lg:text-[18px] text-xs">{t("contact.email")} KoSeongho@gmail.com</span>
+                  <span className="font-gothic lg:text-[18px] text-xs">{t("contact.email")} Sales@KorionAM.com</span>
                 </div>
 
                 <div className="flex items-center gap-4">
