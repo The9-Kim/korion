@@ -22,6 +22,7 @@ export default function ProductDetail() {
 
   // Product Configuration
   const productConfig: Record<string, { useSwiper: boolean; imageCount: number; showFeatures: boolean }> = {
+    "m-6": { useSwiper: true, imageCount: 7, showFeatures: true },
     "m-350": { useSwiper: true, imageCount: 6, showFeatures: true },
     "m-2200": { useSwiper: false, imageCount: 1, showFeatures: false },
     "others": { useSwiper: true, imageCount: 0, showFeatures: false },
