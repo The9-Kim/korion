@@ -71,9 +71,76 @@ export default function ProductHero({
               pagination={{
                 clickable: true,
               }}
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              autoplay={id === "ads60" ? false : { delay: 3000, disableOnInteraction: false }}
               className={`w-full aspect-1082/586 ${isReversed ? 'rounded-tr-[40px]' : 'rounded-tl-[40px]'}`}
+              onSlideChange={(swiper) => {
+                // Pause all videos
+                swiper.slides.forEach((slide: HTMLElement) => {
+                  const video = slide.querySelector("video");
+                  if (video) {
+                    video.pause();
+                  }
+                });
+
+                // Play active video
+                const activeSlide = swiper.slides[swiper.activeIndex];
+                const activeVideo = activeSlide.querySelector("video");
+                if (activeVideo) {
+                  activeVideo.currentTime = 0;
+                  activeVideo.play().catch(() => {
+                    // Silently fail if autoplay is blocked
+                  });
+                }
+              }}
+              onSwiper={(swiper) => {
+                // Check initial slide
+                const activeSlide = swiper.slides[swiper.activeIndex];
+                const activeVideo = activeSlide.querySelector("video");
+                if (activeVideo) {
+                  activeVideo.currentTime = 0;
+                  activeVideo.play().catch(() => {
+                    // Silently fail if autoplay is blocked
+                  });
+                }
+              }}
             >
+              {id === "ads60" && (
+                <>
+                  <SwiperSlide className="flex items-center justify-center">
+                    <div className="relative w-full h-full bg-black">
+                      <video
+                        className={`w-full h-full object-cover ${isReversed ? "rounded-tr-[40px]" : "rounded-tl-[40px]"
+                          }`}
+                        controls
+                        muted
+                        playsInline
+                      >
+                        <source
+                          src="/images/imports/ads60-video-01.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="flex items-center justify-center">
+                    <div className="relative w-full h-full bg-black">
+                      <video
+                        className={`w-full h-full object-cover ${isReversed ? "rounded-tr-[40px]" : "rounded-tl-[40px]"
+                          }`}
+                        controls
+                        muted
+                        playsInline
+                      >
+                        <source
+                          src="/images/imports/ads60-video-02.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  </SwiperSlide>
+                </>
+              )}
+
               {Array.from({ length: imageCount }).map((_, idx) => {
                 const num = idx + 1;
                 return (
