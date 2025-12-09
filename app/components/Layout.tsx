@@ -118,9 +118,18 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Footer Section */}
       <div className="mt-auto">
-        {(location.pathname !== "/about" && location.pathname !== "/contact") && (
-          <img src="/images/footer-image.png" alt="" className="w-full h-auto object-cover" />
-        )}
+        {(() => {
+          const noFooterImagePaths = [
+            "/about",
+            "/contact",
+            "/machines/imports/fliegl",
+            "/machines/imports/dondi"
+          ];
+          console.log('location.pathname:', location.pathname);
+          return !noFooterImagePaths.includes(location.pathname) && (
+            <img src="/images/footer-image.png" alt="" className="w-full h-auto object-cover" />
+          );
+        })()}
         <footer className="bg-gray-50 border-t border-gray-100 py-12 lg:px-20">
           <div className="mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between items-start gap-6">
             <img src="/images/logo.png" alt="Korion" className="h-5 md:h-6 w-auto" />
