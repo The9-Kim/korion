@@ -15,7 +15,7 @@ export default function Produce() {
                       <Trans i18nKey="machines.produce.intro.title" components={{ br: <br /> }} /></h2>
         <div className="w-40 h-[3px] bg-brand-gold-light mx-auto my-16" />
 
-        <div className="mx-auto text-brand-navy break-keep text-[13px]/[30px] tracking-tight">
+        <div className="mx-auto text-brand-navy break-keep text-[17px]/[30px] tracking-tight">
           <p>
             <Trans i18nKey="machines.produce.intro.desc1" components={{ br: <br /> }} />
           </p>
@@ -25,7 +25,7 @@ export default function Produce() {
           <img src="/images/logo.png" alt="Korion" className="h-5 md:h-6 w-auto opacity-20" />
         </div>
 
-        <div className="mx-auto text-brand-navy break-keep text-[13px]/[30px] tracking-tight">
+        <div className="mx-auto text-brand-navy break-keep text-[17px]/[30px] tracking-tight">
           <p>
             <Trans i18nKey="machines.produce.intro.desc2" components={{ br: <br /> }} />
           </p>
