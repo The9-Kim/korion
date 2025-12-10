@@ -53,7 +53,7 @@ export const importBrands: {
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/ads120_card.png",
-        pdfUrl: "/pdf/transportprogramm_gb_2026_www.pdf"
+        pdfUrl: "/pdf/Transportprogramm_GB_2026_www.pdf"
       },
       {
         id: "ads100",
@@ -61,7 +61,7 @@ export const importBrands: {
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/ads100_card.png",
-        pdfUrl: "/pdf/transportprogramm_gb_2026_www.pdf"
+        pdfUrl: "/pdf/Transportprogramm_GB_2026_www.pdf"
       },
       {
         id: "ads60",
@@ -69,7 +69,7 @@ export const importBrands: {
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/ads60_card.png",
-        pdfUrl: "/pdf/transportprogramm_gb_2026_www.pdf"
+        pdfUrl: "/pdf/Transportprogramm_GB_2026_www.pdf"
       },
       {
         id: "others",
@@ -77,7 +77,7 @@ export const importBrands: {
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/others_card.png",
-        pdfUrl: "/pdf/transportprogramm_gb_2026_www.pdf"
+        pdfUrl: "/pdf/Transportprogramm_GB_2026_www.pdf"
       }
     ]
   },
