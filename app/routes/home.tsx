@@ -17,7 +17,7 @@ export default function Home() {
     <Layout>
       <Hero
         video="/videos/main.mp4"
-        image="/images/main/main_video.jpg"
+        image="/images/main/main_video.png"
       />
       <HeroBottom />
       <Features />
