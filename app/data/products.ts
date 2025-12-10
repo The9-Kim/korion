@@ -16,7 +16,7 @@ export const produceProducts: Product[] = [
     category: "produce",
     subtitle: "최적화된 효율성",
     image: "/images/main/m-4.png",
-    pdfUrl: "/pdf/코리온농업기계 리플렛 out 241112.pdf"
+    pdfUrl: "/pdf/produce_m4_m6_leaflet.pdf"
   },
   {
     id: "m-6",
@@ -24,7 +24,7 @@ export const produceProducts: Product[] = [
     category: "produce",
     subtitle: "Kemper header",
     image: "/images/main/m-6.png",
-    pdfUrl: "/pdf/코리온농업기계 리플렛 out 241112.pdf"
+    pdfUrl: "/pdf/produce_m4_m6_leaflet.pdf"
   },
   {
     id: "m-350",
@@ -53,7 +53,7 @@ export const importBrands: {
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/ads120_card.png",
-        pdfUrl: "/pdf/Transportprogramm_GB_2026_www.pdf"
+        pdfUrl: "/pdf/transportprogramm_gb_2026_www.pdf"
       },
       {
         id: "ads100",
@@ -61,7 +61,7 @@ export const importBrands: {
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/ads100_card.png",
-        pdfUrl: "/pdf/Transportprogramm_GB_2026_www.pdf"
+        pdfUrl: "/pdf/transportprogramm_gb_2026_www.pdf"
       },
       {
         id: "ads60",
@@ -69,7 +69,7 @@ export const importBrands: {
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/ads60_card.png",
-        pdfUrl: "/pdf/Transportprogramm_GB_2026_www.pdf"
+        pdfUrl: "/pdf/transportprogramm_gb_2026_www.pdf"
       },
       {
         id: "others",
@@ -77,7 +77,7 @@ export const importBrands: {
         category: "import" as const,
         brand: "Fliegl",
         image: "/images/imports/others_card.png",
-        pdfUrl: "/pdf/Transportprogramm_GB_2026_www.pdf"
+        pdfUrl: "/pdf/transportprogramm_gb_2026_www.pdf"
       }
     ]
   },
