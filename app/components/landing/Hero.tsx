@@ -17,11 +17,11 @@ export default function Hero({ image, video, subtitle }: HeroProps) {
   return (
     <div className="flex flex-col w-full">
       {/* Top Section: Main Banner / Slider */}
-      <section className="relative w-full h-[600px] 2xl:h-[1080px] bg-gray-100 overflow-hidden group">
+      <section className="relative w-full 2xl:h-[1080px] bg-gray-100 overflow-hidden group aspect-[16/9]">
         {video ? (
           // Video Mode (for Home)
           <>
-            <div className="absolute inset-0 bg-secondary-800">
+            <div className="absolute inset-0 bg-secondary-800 aspect-[16/9]">
               <video
                 ref={(el) => {
                   if (el) {
@@ -29,7 +29,7 @@ export default function Hero({ image, video, subtitle }: HeroProps) {
                     el.playsInline = true; // Ensure playsInline property is set
                   }
                 }}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover aspect-[16/9]"
                 src={video}
                 poster={image}
                 autoPlay
@@ -39,14 +39,14 @@ export default function Hero({ image, video, subtitle }: HeroProps) {
               />
             </div>
             {/* Dark overlay for better text visibility */}
-            <div className="absolute top-0 left-0 w-full h-full bg-black/30" />
+            <div className="absolute top-0 left-0 w-full h-full bg-black/30 aspect-[16/9]" />
           </>
         ) : image ? (
           // Static Image Mode (for Machines, etc.)
           <>
-            <div className="absolute inset-0 bg-secondary-800">
+            <div className="absolute inset-0 bg-secondary-800 aspect-[16/9]">
               <div
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0 bg-cover bg-center aspect-[16/9]"
                 style={{ backgroundImage: `url('${image}')` }}
               />
             </div>
@@ -55,7 +55,7 @@ export default function Hero({ image, video, subtitle }: HeroProps) {
           // Default Slider Mode (for Home)
           <>
             {/* Background Image Placeholder */}
-            <div className="absolute inset-0 bg-secondary-200 flex items-center justify-center">
+            <div className="absolute inset-0 bg-secondary-200 flex items-center justify-center aspect-[16/9]">
               <span className="text-secondary-400 text-lg ">Main Banner Image Placeholder</span>
             </div>
 
@@ -75,9 +75,9 @@ export default function Hero({ image, video, subtitle }: HeroProps) {
 
         {/* Overlay Content (Top Left Logo) - Common for both */}
         <div className="absolute left-0 md:left-40 top-0 z-10 w-full md:w-auto flex justify-start">
-          <div className="bg-black/33 p-6 md:p-20 inline-block rounded-br-[20px] md:rounded-br-[30px] flex flex-col justify-center px-4 md:px-12 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-white max-w-xs md:max-w-none">
-            <img src="/images/logo.png" alt="Korion" className="h-8 md:h-10 w-auto brightness-0 invert mb-4" />
-            <p className="text-xl md:text-[40px] font-light leading-tight">{displaySubtitle}</p>
+          <div className="bg-black/33 py-4 px-6 md:p-20 inline-block rounded-br-[15px] md:rounded-br-[30px] flex flex-col justify-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-white max-w-[60%] md:max-w-none">
+            <img src="/images/logo.png" alt="Korion" className="h-5 md:h-10 w-auto brightness-0 invert mb-2 md:mb-4" />
+            <p className="text-sm md:text-[40px] font-light leading-tight whitespace-pre-line">{displaySubtitle}</p>
           </div>
         </div>
       </section>

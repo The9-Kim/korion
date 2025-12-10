@@ -49,7 +49,12 @@ export default function ProductDetail() {
           description={t(`productData.${product.id}.description`)}
           imageCount={config.imageCount}
           useSwiper={config.useSwiper}
-          pdfLabel={t("machines.detail.downloadCatalog")}
+          pdfLabel={product.pdfUrl ? t("machines.detail.downloadCatalog") : undefined}
+          onPdfClick={() => {
+            if (product.pdfUrl) {
+              window.open(product.pdfUrl, "_blank");
+            }
+          }}
         />
       )}
 
