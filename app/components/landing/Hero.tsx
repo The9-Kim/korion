@@ -23,6 +23,12 @@ export default function Hero({ image, video, subtitle }: HeroProps) {
           <>
             <div className="absolute inset-0 bg-secondary-800">
               <video
+                ref={(el) => {
+                  if (el) {
+                    el.muted = true; // Ensure muted property is set
+                    el.playsInline = true; // Ensure playsInline property is set
+                  }
+                }}
                 className="absolute inset-0 w-full h-full object-cover"
                 src={video}
                 poster={image}
