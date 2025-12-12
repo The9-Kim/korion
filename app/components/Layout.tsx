@@ -8,7 +8,7 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -72,7 +72,13 @@ export default function Layout({ children }: LayoutProps) {
             <button className="w-10 h-10 gap-7 flex items-center justify-center">
               <img src="/images/icons/youtube_btn.svg" alt="youtube" className="w-full h-full" />
             </button>
-            <button className="w-10 h-10 flex items-center justify-center">
+            <button
+              className="w-10 h-10 flex items-center justify-center"
+              onClick={() => {
+                console.log("Language button clicked");
+                i18n.changeLanguage(i18n.language === 'en' ? 'ko' : 'en')
+              }}
+            >
               <img src="/images/icons/language_btn.svg" alt="language" className="w-full h-full" />
             </button>
 
