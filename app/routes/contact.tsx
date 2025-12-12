@@ -49,7 +49,7 @@ export default function Contact() {
 
                 <div className="flex items-center md:gap-4 gap-2">
                   <img src="/images/icons/location_icon.png" alt="address" width={32} height={32} className="shrink-0" />
-                  <span className="font-gothic lg:text-[18px] text-xs">{t("contact.address")} 대한민국 전라북도 정읍시 서부산업도로 570-69</span>
+                  <span className="font-gothic lg:text-[18px] text-xs">{t("contact.address")} {t("contact.addressDetail")}</span>
                 </div>
               </div>
               <div className="mt-12 flex w-full justify-end opacity-15 ml-20 absolute">
