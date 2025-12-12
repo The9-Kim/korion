@@ -34,7 +34,7 @@ export default function ProductDetail() {
   const config = productConfig[product.id] || productConfig["default"];
 
   // Get related products for "More Series"
-  const relatedProducts = (product.category === 'produce' ? produceProducts : importBrands.find(b => b.name === product.brand)?.products || [])
+  const relatedProducts = (product.category === 'produce' ? produceProducts : importBrands.find(b => b.name === (product.brand === 'ADS' ? 'Fliegl' : product.brand))?.products || [])
     .filter(p => p.id !== product!.id);
 
   return (
