@@ -1,9 +1,11 @@
 import { clsx } from "clsx";
 
+import type { ReactNode } from "react";
+
 interface ProductFeatureSectionProps {
   backgroundImage: string;
   title?: string;
-  features: string[];
+  features: (string | ReactNode)[];
   className?: string;
   withUnderline?: boolean;
 }

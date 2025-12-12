@@ -73,7 +73,11 @@ export default function ProductDetail() {
             className="bg-light-gray"
             title={t(`productData.${product.id}.visualFeatures.section1.title`, "")}
             withUnderline
-            features={t(`productData.${product.id}.visualFeatures.section1.features`, { returnObjects: true }) as string[]}
+            features={
+              (t(`productData.${product.id}.visualFeatures.section1.features`, { returnObjects: true }) as string[]).map((feature, idx) => (
+                    <Trans key={idx} i18nKey={feature} components={{ br: <br />, small: <span className="text-xs lg:text-xl" /> }} defaults={feature} />
+              ))
+            }
           />
 
           {/* Section 4: Visual Feature 2 (조건부) */}
@@ -90,7 +94,11 @@ export default function ProductDetail() {
                 className="bg-black"
                 title={section2Title}
                 withUnderline
-                features={section2Features as string[]}
+                features={
+                  (section2Features as string[]).map((feature, idx) => (
+                    <Trans key={idx} i18nKey={feature} components={{ br: <br />, small: <span className="text-xs lg:text-xl" /> }} defaults={feature} />
+                  ))
+                }
               />
             ) : null;
           })()}
