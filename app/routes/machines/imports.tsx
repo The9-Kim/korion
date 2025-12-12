@@ -8,9 +8,9 @@ export default function Imports() {
     <div className="max-w-7xl mx-auto py-16">
 
       {importBrands.map((brand) => (
-        <div key={brand.name} className="mb-36 last:mb-0 justify-center">
+        <div key={brand.name()} className="mb-36 last:mb-0 justify-center">
           <div className="text-center mb-20">
-            <h3 className="text-[20px] font-gothic font-bold text-brand-navy">{brand.name}</h3>
+            <h3 className="text-[20px] font-gothic font-bold text-brand-navy">{brand.name()}</h3>
           </div>
 
           <div className="flex flex-wrap gap-8 justify-center">
@@ -18,7 +18,7 @@ export default function Imports() {
               <ProductCard
                 key={product.id}
                 id={product.id}
-                name={product.name}
+                name={product.name()}
                 image={product.image || ""}
                 to={`/machines/imports/${product.id}`}
                 category="imports"

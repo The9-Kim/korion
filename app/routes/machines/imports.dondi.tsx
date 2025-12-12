@@ -4,7 +4,7 @@ import BrandProductRow from "../../components/BrandProductRow";
 
 export default function Dondi() {
   const { t } = useTranslation();
-  const brandData = importBrands.find((b) => b.name === "Dondi");
+  const brandData = importBrands.find((b) => b.name() === "Dondi");
   console.log(brandData);
 
   if (!brandData) return null;
@@ -18,7 +18,7 @@ export default function Dondi() {
             key={product.id}
             id={product.id}
             category="import"
-            name={product.name}
+            name={product.name()}
             subtitle={t(`productData.${product.id}.landingSubtitle`)}
             description={`productData.${product.id}.landingDescription`}
             isReversed={isReversed}

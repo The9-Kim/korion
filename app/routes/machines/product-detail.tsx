@@ -34,7 +34,7 @@ export default function ProductDetail() {
   const config = productConfig[product.id] || productConfig["default"];
 
   // Get related products for "More Series"
-  const relatedProducts = (product.category === 'produce' ? produceProducts : importBrands.find(b => b.name === (product.brand === 'ADS' ? 'Fliegl' : product.brand))?.products || [])
+  const relatedProducts = (product.category === 'produce' ? produceProducts : importBrands.find(b => b.name() === (product.brand === 'ADS' ? 'Fliegl' : product.brand))?.products || [])
     .filter(p => p.id !== product!.id);
 
   return (
@@ -152,13 +152,13 @@ export default function ProductDetail() {
                   <div className="relative w-[72px] h-[72px] rounded-full bg-white border border-light-gray shadow-md flex items-center justify-center mb-6 transition-colors duration-300">
                     <ImageOrText
                       src={`/images/${related.category === 'produce' ? 'produce' : 'imports'}/${related.id}-circle.png`}
-                      alt={related.name}
-                      text={related.name}
+                      alt={related.name()}
+                      text={related.name()}
                       className="w-full h-full object-contain transition-transform duration-500 hover:scale-120"
                     />
                   </div>
                   <span className="text-[20px] font-gothic font-bold text-brand-navy ">
-                    {related.name}
+                    {related.name()}
                   </span>
                 </Link>
               ))}

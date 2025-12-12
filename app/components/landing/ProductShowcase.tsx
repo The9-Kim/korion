@@ -46,7 +46,7 @@ export default function ProductShowcase() {
             <SwiperSlide key={product.id}>
               <ProductCard
                 id={product.id}
-                name={product.name}
+                name={product.name()}
                 image={product.image}
                 category={product.category}
                 subtitle={product.category === 'import' ? product.brand : undefined}

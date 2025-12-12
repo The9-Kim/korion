@@ -88,21 +88,21 @@ export default function MachinesLayout() {
                     currentId === product.id && "text-brand-navy font-bold"
                   )}
                 >
-                  {product.name}
+                  {product.name()}
                 </Link>
               ))
             ) : (
               importBrands.map((brand) => {
                 // Map brand to specific product ID
                 let targetId = "";
-                if (brand.name === "Fliegl") targetId = "fliegl";
-                else if (brand.name === "BVL") targetId = "vertical-mixer";
-                else if (brand.name === "Dondi") targetId = "dondi";
-                else targetId = brand.name.toLowerCase();
+                if (brand.name() === "Fliegl") targetId = "fliegl";
+                else if (brand.name() === "BVL") targetId = "vertical-mixer";
+                else if (brand.name() === "Dondi") targetId = "dondi";
+                else targetId = brand.name().toLowerCase();
 
                 return (
                   <Link
-                    key={brand.name}
+                    key={brand.name()}
                     to={`/machines/imports/${targetId}`}
                     className={clsx(
                       "cursor-pointer hover:text-brand-navy transition-colors",
@@ -110,7 +110,7 @@ export default function MachinesLayout() {
                       (currentId === targetId || brand.products.some(p => p.id === currentId)) && "text-brand-navy font-bold"
                     )}
                   >
-                    {brand.name}
+                    {brand.name()}
                   </Link>
                 );
               })

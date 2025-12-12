@@ -4,7 +4,7 @@ import BrandProductRow from "../../components/BrandProductRow";
 
 export default function Fliegl() {
   const { t } = useTranslation();
-  const brandData = importBrands.find((b) => b.name === "Fliegl");
+  const brandData = importBrands.find((b) => b.name() === "Fliegl");
 
   if (!brandData) return null;
 
@@ -19,7 +19,7 @@ export default function Fliegl() {
             key={product.id}
             id={product.id}
             category="import"
-            name={product.name}
+            name={product.name()}
             subtitle={t(`productData.${product.id}.landingSubtitle`)}
             description={`productData.${product.id}.landingDescription`}
             isReversed={isReversed}

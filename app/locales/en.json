@@ -87,6 +87,7 @@
     "productData": {
         "m-4": {
             "name": "M-4",
+            "cardName": "M-4",
             "subtitle": "Optimized for Efficiency",
             "description": "The M-4 model (4 rows) is built for efficiency and performance versatility.<br />It is designed with Kemper headers, delivering 180–240 HP with its PTO<br />shaft overdrive clutch.<br /><br />The M-4 provides optimized efficiency for 4-row harvesting.<br /><br />Options include the Alpha version with hydraulics from the tractor<br />or the Beta version with a self-hydraulic pump in the harvester.",
             "visualFeatures": {
@@ -111,6 +112,7 @@
         },
         "m-6": {
             "name": "M-6",
+            "cardName": "M-6",
             "subtitle": "Precision Harvesting, Powerful Performance",
             "description": "The M-6 model (6 rows) is built for higher capacity and wider working widths,<br />capable of handling rows up to 4.5 meters.<br />It utilizes a heavier duty gearbox and offers a power output of 240–300 HP<br />via its PTO shaft overdrive clutch.<br /><br />The advanced chopping system features high-speed rollers and knives with<br />segments adjustable via a hydraulic cylinder, making it ideal for large-scale<br />operations requiring maximum throughput.<br />Options include the Alpha version with hydraulics from the tractor,<br />or the Beta version with a self-hydraulic pump in the harvester.",
             "visualFeatures": {
@@ -135,6 +137,7 @@
         },
         "m-350": {
             "name": "M-350",
+            "cardName": "M-350",
             "subtitle": "Superior Agility and Versatility",
             "description": "The M-350 offers versatility with four drums<br />and a generous working width of up to 3.5 meters.<br />It achieves reliable and precise forage intake using<br />a four-drum configuration.<br /><br />M-350 balances efficiency and size, making it a perfect<br />and affordable choice for mid-sized farms that require<br />versatile operation across multiple crops while benefiting<br />from KORION’s superior build quality.<br /><br />Options include the Alpha version with hydraulics from<br />the tractor or the Beta version with a self-hydraulic pump<br />in the harvester.",
             "visualFeatures": {
@@ -150,11 +153,13 @@
         },
         "m-2200": {
             "name": "M-2200",
+            "cardName": "M-2200",
             "subtitle": "Compact, Agile, Efficient",
             "description": "The M-2200 with two drums provides the ultimate<br />combination of compact agility and cost-effectiveness.<br />With a working width of up to 2.2 meters, this machine<br />excels in smaller fields or areas with limited access.<br /><br />Its two-drum configuration ensures excellent<br />maneuverability and stability. The M-2200’s accessible<br />price point makes it an ideal option for farmers looking<br />to mechanize their operations with reliable,<br />Korean-engineered technology that handles the local<br />terrain with ease.<br /><br />Options include the Alpha version with hydraulics<br />from the tractor or the Beta version with a self-hydraulic<br />pump in the harvester.<br /><br />• Up to 2.2 meters<br />• Can use with a 120-160 HP tractor<br />• Alpha or Beta version"
         },
         "ads120": {
             "name": "ADS 120",
+            "cardName": "ADS 120",
             "subtitle": "Large-Scale Operations<br />& Extreme Efficiency",
             "description": "The ADS 120 is built for large-scale farms. It is the optimal model<br />for large livestock operations, providing consistent spreading and<br />superior performance across various terrains and field conditions,<br />regardless of the differing compositions of Hanwoo (Korean beef<br />cattle) or dairy manure.<br /><br />The ADS 120 features high ground clearance and large tires, ensuring<br />excellent drivability on rough farm roads. Its hydraulic drawbar<br />suspension makes it perfectly suited for slopes and uneven access routes.<br /><br />Equipped with two ultra-large vertical spreading beater shafts,<br />the ADS 120 guarantees uniform spreading and powerful breaking<br />of manure clumps. The entire unit is finished with a hot-dip<br />galvanized coating, ensuring long-term product quality and durability.<br /><br />The ADS 120 utilizes a Push-off (hydraulic cylinder load transfer<br />system) function, which ensures fast and uniform manure application.<br />This system also guarantees significantly lower post-maintenance<br />costs compared to chain-based moving floor systems.",
             "visualFeatures": {
@@ -178,6 +183,7 @@
         },
         "ads100": {
             "name": "ADS 100",
+            "cardName": "ADS 100",
             "subtitle": "The Optimal Combination of<br />Capacity and Maneuverability",
             "description": "The ADS 100 is the industry standard, offering the optimal<br />combination of capacity and maneuverability.<br /><br />This model is perfectly suited for large livestock operations,<br />providing consistent spreading and excellent performance<br />across diverse terrains and field conditions, delivering<br />superior results regardless of the differing compositions<br />of Hanwoo (Korean beef cattle) or dairy manure.<br /><br />The ADS 100 features high ground clearance and large tires,<br />ensuring optimal drivability on rough farm roads, and its<br />hydraulic drawbar suspension makes it ideally suited for<br />sloped access routes.<br /><br />The ADS 100 is equipped with two ultra-large vertical<br />spreading beater shafts, which guarantee uniform manure<br />distribution and powerful breaking of clumps. The machine<br />is finished with hot-dip galvanizing, ensuring long-term<br />product quality and durability.<br /><br />The ADS 100 features the Push-off (hydraulic cylinder<br />material moving system) function, which guarantees fast<br />and uniform manure application while ensuring significantly<br />lower post-maintenance costs compared to chain-based<br />moving floor systems.",
             "visualFeatures": {
@@ -201,6 +207,7 @@
         },
         "ads60": {
             "name": "ADS 60",
+            "cardName": "ADS 60",
             "subtitle": "Ultimate Agility for Complex Terrain",
             "description": "Perfect for complex terrain and smaller fields.<br />The agile ADS 60 delivers precise material placement<br />and exceptional ease of handling.<br /><br />Manage resources effectively and maintain soil health<br />without compromising spreading quality.",
             "visualFeatures": {
@@ -222,6 +229,7 @@
         },
         "others": {
             "name": "Others",
+            "cardName": "Others",
             "description": "Fliegl의 다양한 농업 기계 솔루션을 만나보세요.",
             "subProducts": [
                 {
@@ -242,6 +250,7 @@
         },
         "vertical-mixer": {
             "name": "Vertical Mixers",
+            "cardName": "Vertical Mixers",
             "subtitle": "Reliable TMR Quality,<br />Tailored for Your Farm",
             "description": "BVL V-Mix vertical mixers ensure a rapid,<br />homogenous Total Mixed Ration (TMR),<br />minimizing sorting and maximizing nutrient<br />uptake for peak herd performance.<br /><br />Choose from the V-Mix Plus for superior<br />blending, the agile V-Mix Compact for tight<br />spaces, or the self-propelled V-Mix Drive for<br />complete autonomy and efficiency.<br /><br />Reliable TMR quality, tailored for your farm.",
             "visualFeatures": {
@@ -261,6 +270,7 @@
         },
         "ditch-digger": {
             "name": "Ditchers",
+            "cardName": "Ditchers",
             "subtitle": "High-Efficiency Drainage Channelers",
             "description": "Manage field water with precision. Dondi Ditchers<br />create perfectly formed, highly efficient drainage<br />channels to prevent waterlogging and soil erosion.<br />Built for reliability, they ensure optimal field<br />conditions and timely sowing, maximizing your<br />harvest potential.<br /><br />Dondi ditchers can spread the soil up to 50m.<br />The ditcher can dig on the right and left sides<br />as well as central digging.",
             "visualFeatures": {
@@ -277,11 +287,12 @@
                     ]
                 }
             },
-            "landingSubtitle": "Ditchers",
+            "landingSubtitle": "",
             "landingDescription": "Efficiently improves field drainage,preventing<br />waterlogging and minimizing soil erosion.<br />With precise channel formation and<br />fast operating performance, Dondi Ditchers<br />optimize overall crop growth conditions."
         },
         "cultivator": {
             "name": "Cultivators",
+            "cardName": "Cultivators",
             "subtitle": "Enhanced Fertility,<br />Maximized Yields",
             "description": "Achieve ideal seedbed preparation and deeper<br />soil aeration. Dondi Cultivators effectively manage<br />residue and control weeds, promoting healthier soil<br />structure for better root development.<br /><br />The Dondi cultivator features curved tines for quick<br />soil decompaction. Enhance your field’s fertility and<br />overall long-term yield.",
             "visualFeatures": {
@@ -298,7 +309,7 @@
                     ]
                 }
             },
-            "landingSubtitle": "Cultivators",
+            "landingSubtitle": "",
             "landingDescription": "Designed to deepen soil  tillage, improve aeration,<br />and support strong root establishment.<br />Dondi Cultivators are essential for<br />maintaining a healthy soil structure."
         }
     }

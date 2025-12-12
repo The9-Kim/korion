@@ -1,6 +1,8 @@
+import { t } from "i18next";
+
 export interface Product {
   id: string;
-  name: string;
+  name: () => string;
   subtitle?: string;
   image?: string;
   category: "produce" | "import";
@@ -12,7 +14,7 @@ export interface Product {
 export const produceProducts: Product[] = [
   {
     id: "m-4",
-    name: "M-4",
+    name: () => t("productData.m-4.cardName"),
     category: "produce",
     subtitle: "최적화된 효율성",
     image: "/images/main/m-4.png",
@@ -20,7 +22,7 @@ export const produceProducts: Product[] = [
   },
   {
     id: "m-6",
-    name: "M-6",
+    name: () => t("productData.m-6.cardName"),
     category: "produce",
     subtitle: "Kemper header",
     image: "/images/main/m-6.png",
@@ -28,28 +30,28 @@ export const produceProducts: Product[] = [
   },
   {
     id: "m-350",
-    name: "M-350",
+    name: () => t("productData.m-350.cardName"),
     category: "produce",
     image: "/images/main/m-350.png"
   },
   {
     id: "m-2200",
-    name: "M-2200",
+    name: () => t("productData.m-2200.cardName"),
     category: "produce",
     image: "/images/main/m-2200.png"
   }
 ];
 
 export const importBrands: {
-  name: string;
+  name: () => string;
   products: Product[];
 }[] = [
   {
-    name: "Fliegl",
+    name: () => t("Fliegl"),
     products: [
       {
         id: "ads120",
-        name: "ADS 120",
+        name: () => t("productData.ads120.cardName"),
         category: "import" as const,
         brand: "ADS",
         image: "/images/imports/ads120_card.png",
@@ -57,7 +59,7 @@ export const importBrands: {
       },
       {
         id: "ads100",
-        name: "ADS 100",
+        name: () => t("productData.ads100.cardName"),
         category: "import" as const,
         brand: "ADS",
         image: "/images/imports/ads100_card.png",
@@ -65,7 +67,7 @@ export const importBrands: {
       },
       {
         id: "ads60",
-        name: "ADS 60",
+        name: () => t("productData.ads60.cardName"),
         category: "import" as const,
         brand: "ADS",
         image: "/images/imports/ads60_card.png",
@@ -73,7 +75,7 @@ export const importBrands: {
       },
       {
         id: "others",
-        name: "Others",
+        name: () => t("productData.others.cardName"),
         category: "import" as const,
         brand: "ADS",
         image: "/images/imports/others_card.png",
@@ -82,11 +84,11 @@ export const importBrands: {
     ]
   },
   {
-    name: "BVL",
+    name: () => t("BVL"),
     products: [
       {
         id: "vertical-mixer",
-        name: "수직믹서",
+        name: () => t("productData.vertical-mixer.cardName"),
         category: "import" as const,
         brand: "BVL",
         image: "/images/imports/bvl_card.png",
@@ -96,11 +98,11 @@ export const importBrands: {
     ]
   },
   {
-    name: "Dondi",
+    name: () => t("Dondi"),
     products: [
       {
         id: "ditch-digger",
-        name: "배수로 조성기",
+        name: () => t("productData.ditch-digger.cardName"),
         category: "import" as const,
         brand: "Dondi",
         image: "/images/imports/bsr_card.png",
@@ -109,7 +111,7 @@ export const importBrands: {
       },
       {
         id: "cultivator",
-        name: "치즐쟁기",
+        name: () => t("productData.cultivator.cardName"),
         category: "import" as const,
         brand: "Dondi",
         image: "/images/imports/gwg_card.png",
