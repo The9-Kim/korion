@@ -7,15 +7,6 @@ import { Link } from "react-router";
 export default function Features() {
   const { t } = useTranslation();
 
-  const features = [
-    { id: 1, title: t("features.items.1.title"), desc: t("features.items.1.desc") },
-    { id: 2, title: t("features.items.2.title"), desc: t("features.items.2.desc") },
-    { id: 3, title: t("features.items.3.title"), desc: t("features.items.3.desc") },
-    { id: 4, title: t("features.items.4.title"), desc: t("features.items.4.desc") },
-    { id: 5, title: t("features.items.5.title"), desc: t("features.items.5.desc") },
-    { id: 6, title: t("features.items.6.title"), desc: t("features.items.6.desc") },
-  ];
-
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
