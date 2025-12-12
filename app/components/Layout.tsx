@@ -11,6 +11,7 @@ export default function Layout({ children }: LayoutProps) {
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isLangMenuOpen, setIsLangMenuOpen] = React.useState(false);
 
   const navItems = [
     // { path: "/about", label: t("nav.about") },
@@ -72,15 +73,55 @@ export default function Layout({ children }: LayoutProps) {
             <button className="w-10 h-10 gap-7 flex items-center justify-center">
               <img src="/images/icons/youtube_btn.svg" alt="youtube" className="w-full h-full" />
             </button>
-            <button
-              className="w-10 h-10 flex items-center justify-center"
-              onClick={() => {
-                console.log("Language button clicked");
-                i18n.changeLanguage(i18n.language === 'en' ? 'ko' : 'en')
-              }}
-            >
-              <img src="/images/icons/language_btn.svg" alt="language" className="w-full h-full" />
-            </button>
+            <div className="relative">
+              <button
+                className="w-10 h-10 flex items-center justify-center p-0 rounded-full hover:bg-gray-100 transition-colors"
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+              >
+                <img src="/images/icons/language_btn.svg" alt="language" className="w-full h-full" />
+              </button>
+
+              {isLangMenuOpen && (
+                <>
+                  <div
+                    className="fixed inset-0 z-10"
+                    onClick={() => setIsLangMenuOpen(false)}
+                  />
+                  <div className="absolute right-0 top-full mt-2 w-32 bg-white rounded-lg shadow-xl border border-gray-100 py-1 z-20 overflow-hidden transform origin-top-right transition-all">
+                    <button
+                      className={clsx(
+                        "w-full text-left px-4 py-3 text-sm hover:bg-gray-50 transition-colors flex items-center justify-between",
+                        i18n.language === 'en' ? 'text-brand-navy font-bold bg-gray-50' : 'text-gray-600'
+                      )}
+                      onClick={() => {
+                        i18n.changeLanguage('en');
+                        setIsLangMenuOpen(false);
+                      }}
+                    >
+                      <span>English</span>
+                      {i18n.language === 'en' && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-brand-navy" />
+                      )}
+                    </button>
+                    <button
+                      className={clsx(
+                        "w-full text-left px-4 py-3 text-sm hover:bg-gray-50 transition-colors flex items-center justify-between",
+                        i18n.language === 'ko' ? 'text-brand-navy font-bold bg-gray-50' : 'text-gray-600'
+                      )}
+                      onClick={() => {
+                        i18n.changeLanguage('ko');
+                        setIsLangMenuOpen(false);
+                      }}
+                    >
+                      <span>한국어</span>
+                      {i18n.language === 'ko' && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-brand-navy" />
+                      )}
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
 
             {/* Mobile Menu Button */}
             <button
