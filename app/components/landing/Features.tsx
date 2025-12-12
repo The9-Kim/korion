@@ -37,9 +37,6 @@ export default function Features() {
             <p className="text-center">
               <Trans i18nKey="about.desc1" components={{ br: <br className="hidden lg:block" /> }} />
             </p>
-            <p className="text-center mt-12">
-              <Trans i18nKey="about.desc2" components={{ br: <br className="hidden lg:block" /> }} />
-            </p>
           </div>
 
           <div className="mt-12">
