@@ -74,13 +74,11 @@
                     "sub": "인입부 시스템"
                 }
             },
-            "listTitle": "M-시리즈",
-            "viewDetail": "자세히 보기"
+            "listTitle": "M-시리즈"
         },
         "detail": {
             "downloadCatalog": "PDF 다운로드 하기",
             "specs": "Specifications",
-            "noSpecs": "상세 스펙 정보가 없습니다.",
             "moreSeries": "{{brand}} 시리즈 더보기"
         }
     },

@@ -5,11 +5,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Trans } from "react-i18next";
 
+import type { ReactNode } from "react";
+
 interface ProductHeroProps {
   id: string;
   category: "produce" | "import";
   name: string;
-  subtitle: string;
+  subtitle: ReactNode;
   description?: string;
   imageCount?: number;
   useSwiper?: boolean;

@@ -45,7 +45,13 @@ export default function ProductDetail() {
           id={product.id}
           category={product.category}
           name={product.category === 'produce' ? `KORION ${product.name}` : t(`productData.${product.id}.name`)}
-          subtitle={t(`productData.${product.id}.subtitle`, product.subtitle || "")}
+          subtitle={
+            <Trans
+              i18nKey={`productData.${product.id}.subtitle`}
+              components={{ br: <br /> }}
+              defaults={product.subtitle || ""}
+            />
+          }
           description={t(`productData.${product.id}.description`)}
           imageCount={config.imageCount}
           useSwiper={config.useSwiper}
