@@ -47,7 +47,7 @@ export default function BrandProductRow({
         </h2>
 
         {/* Subtitle/Description - styled as per image reference (Clean blocks) */}
-        <div className={`text-[17px] leading-[1.6] text-dark-gray font-gothic tracking-tight break-keep ${isReversed ? "lg:text-right" : "lg:text-left"}`}>
+        <div className={`text-[20px] leading-[1.6] text-dark-gray font-gothic tracking-tight break-keep ${isReversed ? "lg:text-right" : "lg:text-left"}`}>
           <Trans i18nKey={description} components={{ br: <br /> }} />
         </div>
 

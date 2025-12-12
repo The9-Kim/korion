@@ -34,7 +34,7 @@ export default function ProductHero({
 }: ProductHeroProps) {
   const imageCategory = category === "produce" ? "produce" : "imports";
   const autoplay = id === "ads60" || id === 'ditch-digger' ? false : { delay: 3000, disableOnInteraction: false };
-  
+
   return (
     <div className="relative max-w-[1920px] mx-auto pt-20 lg:pt-32 pb-20 min-h-auto">
       <div className={`flex flex-col ${isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start`}>
@@ -189,7 +189,7 @@ export default function ProductHero({
       {/* Description (Optional, rendered below) */}
       {description && (
         <div className="max-w-4xl mx-auto px-4 pt-30 text-center">
-          <p className="text-[17px] leading-[30px] tracking-tighter font-gothic text-brand-navy">
+          <p className="text-[20px] leading-[30px] tracking-tighter font-gothic text-brand-navy">
             <Trans i18nKey={description} components={{ br: <br /> }} />
           </p>
         </div>

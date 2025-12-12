@@ -6,6 +6,8 @@ import { Link } from "react-router";
 
 export default function Features() {
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const isEn = i18n.language === "en";
 
   return (
     <section className="py-20">
@@ -24,7 +26,7 @@ export default function Features() {
             <img src="/images/logo.png" alt="Korion" className="h-6 w-auto opacity-35" />
           </div>
 
-          <div className="my-4 text-dark-gray leading-6 text-xs lg:text-[17px]/8 break-keep tracking-tighter font-gothic">
+          <div className={`my-4 text-dark-gray leading-6 text-xs lg:text-[20px]/8 break-keep tracking-tighter font-gothic`}>
             <p className="text-center">
               <Trans i18nKey="about.desc1" components={{ br: <br className="hidden lg:block" /> }} />
             </p>
