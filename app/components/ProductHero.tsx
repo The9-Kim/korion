@@ -10,7 +10,7 @@ import type { ReactNode } from "react";
 interface ProductHeroProps {
   id: string;
   category: "produce" | "import";
-  name: string;
+  name: ReactNode;
   subtitle: ReactNode;
   description?: string;
   imageCount?: number;
@@ -44,7 +44,7 @@ export default function ProductHero({
           <div className="text-sm lg:text-[20px] font-gothic text-dark-gray mb-2 tracking-tighter">
             {subtitle}
           </div>
-          <h1 className="text-[20px] lg:text-[35px] font-gothic font-bold text-brand-navy leading-tight mb-4">
+          <h1 className="text-[20px] lg:text-[35px]/[35px]  font-gothic font-bold text-brand-navy leading-tight mb-4">
             {name}
           </h1>
           <div className="w-[100px] lg:w-[171px] h-[3px] bg-brand-gold-light mb-3 mx-auto lg:mx-0" />

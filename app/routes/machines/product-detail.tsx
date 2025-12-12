@@ -115,7 +115,13 @@ export default function ProductDetail() {
                 key={subProduct.id || idx}
                 id={subProduct.id}
                 category="import"
-                name={subProduct.name}
+                name={
+                  <Trans
+                    i18nKey={subProduct.name}
+                    components={{ br: <br />, small: <span className="text-xs lg:text-xl" /> }}
+                    defaults={subProduct.name}
+                  />
+                }
                 subtitle={subProduct.subtitle}
                 description={subProduct.description}
                 imageCount={3} // Defaulting to 3 images for sub-products as requested (01~03)
