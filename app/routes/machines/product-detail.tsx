@@ -44,12 +44,11 @@ export default function ProductDetail() {
         <ProductHero
           id={product.id}
           category={product.category}
-          name={product.category === 'produce' ? `KORION ${product.name}` : t(`productData.${product.id}.name`)}
+          name={product.category === 'produce' ? `KORION ${product.name()}` : t(`productData.${product.id}.name`)}
           subtitle={
             <Trans
               i18nKey={`productData.${product.id}.subtitle`}
               components={{ br: <br /> }}
-              defaults={product.subtitle || ""}
             />
           }
           description={t(`productData.${product.id}.description`)}

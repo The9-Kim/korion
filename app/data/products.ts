@@ -3,7 +3,6 @@ import { t } from "i18next";
 export interface Product {
   id: string;
   name: () => string;
-  subtitle?: string;
   image?: string;
   category: "produce" | "import";
   brand?: string; // For imports
@@ -16,7 +15,6 @@ export const produceProducts: Product[] = [
     id: "m-4",
     name: () => t("productData.m-4.cardName"),
     category: "produce",
-    subtitle: "최적화된 효율성",
     image: "/images/main/m-4.png",
     pdfUrl: "/pdf/produce_m4_m6_leaflet.pdf"
   },
@@ -24,7 +22,6 @@ export const produceProducts: Product[] = [
     id: "m-6",
     name: () => t("productData.m-6.cardName"),
     category: "produce",
-    subtitle: "Kemper header",
     image: "/images/main/m-6.png",
     pdfUrl: "/pdf/produce_m4_m6_leaflet.pdf"
   },
