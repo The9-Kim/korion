@@ -17,10 +17,10 @@ export default function Contact() {
       <div className="relative bg-white">
         <Hero image="/images/produce/m-6_hero.png" />
         <div
-          className="absolute top-0 left-0 w-full flex items-center justify-center z-20 lg:px-50 px-8"
+          className="w-full flex items-center justify-center z-20 lg:px-50 px-8"
         >
           {/* Content Card */}
-          <div className="relative z-10 bg-white/90 backdrop-blur-sm w-full rounded-tr-[40px] overflow-hidden shadow-xl md:mt-60 mt-24 my-4">
+          <div className="relative z-10 bg-white/90 backdrop-blur-sm w-full rounded-tr-[40px] overflow-hidden shadow-xl my-4 -mt-36 sm:-mt-60 md:-mt-72 lg:-mt-80 xl:-mt-130 2xl:-mt-220">
             <div className="p-5 md:p-12 md:pt-16">
               <div className="mb-10">
                 <img src="/images/logo.png" alt="Korion" className="h-5 md:h-11 w-auto" />
