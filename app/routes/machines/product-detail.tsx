@@ -56,8 +56,9 @@ export default function ProductDetail() {
           useSwiper={config.useSwiper}
           pdfLabel={product.pdfUrl ? t("machines.detail.downloadCatalog") : undefined}
           onPdfClick={() => {
-            if (product.pdfUrl) {
-              window.open(product.pdfUrl, "_blank");
+            const url = typeof product.pdfUrl === "function" ? product.pdfUrl() : product.pdfUrl;
+            if (url) {
+              window.open(url, "_blank");
             }
           }}
         />
@@ -128,8 +129,9 @@ export default function ProductDetail() {
                 isReversed={!isEven}
                 pdfLabel={t("machines.detail.downloadCatalog")}
                 onPdfClick={() => {
-                  if (product.pdfUrl) {
-                    window.open(product.pdfUrl, "_blank");
+                  const url = typeof product.pdfUrl === "function" ? product.pdfUrl() : product.pdfUrl;
+                  if (url) {
+                    window.open(url, "_blank");
                   }
                 }}
               />

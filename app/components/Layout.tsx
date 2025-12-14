@@ -71,7 +71,15 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Actions & Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:block bg-brand-navy text-white px-9 py-[6px] text-[12px]  hover:bg-brand-navy-hover transition-colors rounded-sm cursor-pointer">
+            <button
+              className="hidden md:block bg-brand-navy text-white px-9 py-[6px] text-[12px]  hover:bg-brand-navy-hover transition-colors rounded-sm cursor-pointer"
+              onClick={() => {
+                const url = i18n.language === "en"
+                  ? "/pdf/korion_Catalog_English.pdf"
+                  : "/pdf/korion_Catalog_Korean.pdf";
+                window.open(url, "_blank");
+              }}
+            >
               {t("nav.catalogue")}
             </button>
             <button className="w-10 h-10 gap-7 flex items-center justify-center cursor-pointer"

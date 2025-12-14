@@ -1,5 +1,7 @@
 import { t } from "i18next";
 
+import i18n from "i18next";
+
 export interface Product {
   id: string;
   name: () => string;
@@ -7,7 +9,7 @@ export interface Product {
   category: "produce" | "import";
   brand?: string; // For imports
   nameFont?: "gothic";
-  pdfUrl?: string;
+  pdfUrl?: string | (() => string);
 }
 
 export const produceProducts: Product[] = [
@@ -29,13 +31,21 @@ export const produceProducts: Product[] = [
     id: "m-350",
     name: () => t("productData.m-350.cardName"),
     category: "produce",
-    image: "/images/main/m-350.png"
+    image: "/images/main/m-350.png",
+    pdfUrl: () =>
+      i18n.language === "ko"
+        ? "/pdf/korion_Catalog_Korean.pdf"
+        : "/pdf/korion_Catalog_English.pdf"
   },
   {
     id: "m-2200",
     name: () => t("productData.m-2200.cardName"),
     category: "produce",
-    image: "/images/main/m-2200.png"
+    image: "/images/main/m-2200.png",
+    pdfUrl: () =>
+      i18n.language === "ko"
+        ? "/pdf/korion_Catalog_Korean.pdf"
+        : "/pdf/korion_Catalog_English.pdf"
   }
 ];
 
