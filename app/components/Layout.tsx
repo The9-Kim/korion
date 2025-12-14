@@ -27,6 +27,10 @@ export default function Layout({ children }: LayoutProps) {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
 
+  const onClickYoutube = () => {
+    window.open('https://www.youtube.com/@KorionAgMachines', '_blank');
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white font-aldrich">
       {/* Header */}
@@ -67,15 +71,17 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Actions & Mobile Menu Button */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:block bg-brand-navy text-white px-9 py-[6px] text-[12px]  hover:bg-brand-navy-hover transition-colors rounded-sm">
+            <button className="hidden md:block bg-brand-navy text-white px-9 py-[6px] text-[12px]  hover:bg-brand-navy-hover transition-colors rounded-sm cursor-pointer">
               {t("nav.catalogue")}
             </button>
-            <button className="w-10 h-10 gap-7 flex items-center justify-center">
+            <button className="w-10 h-10 gap-7 flex items-center justify-center cursor-pointer"
+              onClick={onClickYoutube}
+            >
               <img src="/images/icons/youtube_btn.svg" alt="youtube" className="w-full h-full" />
             </button>
             <div className="relative">
               <button
-                className="w-10 h-10 flex items-center justify-center p-0 rounded-full hover:bg-gray-100 transition-colors"
+                className="w-10 h-10 flex items-center justify-center p-0 rounded-full hover:bg-gray-100 transition-colors cursor-pointer"
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
               >
                 <img src="/images/icons/language_btn.svg" alt="language" className="w-full h-full" />
