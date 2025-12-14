@@ -127,6 +127,11 @@ export default function ProductDetail() {
                 useSwiper={true}
                 isReversed={!isEven}
                 pdfLabel={t("machines.detail.downloadCatalog")}
+                onPdfClick={() => {
+                  if (product.pdfUrl) {
+                    window.open(product.pdfUrl, "_blank");
+                  }
+                }}
               />
             );
           })}
