@@ -33,7 +33,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Frame Buster for Domain Masking issues
+              try {
+                if (window.top !== window.self) {
+                  window.top.location = window.self.location;
+                }
+              } catch (e) {
+                console.warn("Could not break out of frame:", e);
+              }
+            `,
+          }}
+        />
         <Meta />
         <Links />
       </head>
