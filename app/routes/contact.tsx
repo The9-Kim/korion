@@ -20,8 +20,8 @@ export default function Contact() {
           className="absolute top-0 left-0 w-full flex items-center justify-center z-20 lg:px-50 px-8"
         >
           {/* Content Card */}
-          <div className="relative z-10 bg-white/90 backdrop-blur-sm w-full rounded-tr-[40px] overflow-hidden shadow-xl xl:my-40 lg:my-30 my-4">
-            <div className="p-6 md:p-24 md:pt-32">
+          <div className="relative z-10 bg-white/90 backdrop-blur-sm w-full rounded-tr-[40px] overflow-hidden shadow-xl md:mt-60 mt-24 my-4">
+            <div className="p-6 md:p-16 md:pt-20">
               <div className="mb-10">
                 <img src="/images/logo.png" alt="Korion" className="h-5 md:h-11 w-auto" />
               </div>
