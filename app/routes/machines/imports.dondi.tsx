@@ -5,7 +5,6 @@ import BrandProductRow from "../../components/BrandProductRow";
 export default function Dondi() {
   const { t } = useTranslation();
   const brandData = importBrands.find((b) => b.name() === "Dondi");
-  console.log(brandData);
 
   if (!brandData) return null;
 

@@ -15,7 +15,9 @@ export default function Features() {
         <div className="text-center mb-16">
           <span className="text-brand-gold-light lg:text-[15px] text-xs">{t("features.badge")}</span>
           <h2 className="lg:text-[20px] text-sm font-gothic text-dark-gray mt-2">{t("features.title")}</h2>
-          <h3 className="lg:text-[27px] text-lg text-brand-navy font-gothic font-extrabold mt-3">{t("features.subtitle")}</h3>
+          <h3 className="lg:text-[27px]/27px text-lg text-brand-navy font-gothic font-extrabold mt-3">
+            <Trans i18nKey="features.subtitle" components={{ br: <br /> }} />
+          </h3>
         </div>
         <div className="items-center justify-center flex flex-col">
           <h2 className="text-sm lg:text-[20px] font-bold font-gothic text-dark-gray tracking-tighter leading-11">

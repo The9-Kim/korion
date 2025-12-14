@@ -13,14 +13,14 @@
     "features": {
         "badge": "Best Item",
         "title": "Precision Harvesting, Powerful Performance",
-        "subtitle": "The KORION Story: Precision Engineering for Local Success"
+        "subtitle": "The KORION Story:<br />Precision Engineering for Local Success"
     },
     "products": {
         "more": "더 알아보기"
     },
     "about": {
         "title": "Engineered for Asia, World-Class Performance",
-        "desc1": "KORION is a Korean agricultural machinery business based in South Korea’s<br />largest agricultural region, dedicated to meeting the unique needs<br />of Asian farmers.<br /><br />Our mission is simple: to help you chieve high-quality crops and less crop<br />loss using hyper-high quality machinery, always keeping safety in mind.<br /><br />Unlike many imported European models—which are typically optimized for vast,<br />large, flat fields—our R&D and manufacturing processes are centered on<br />terrain adaptability and maneuverability specialized for Asia’s needs.<br /><br />We provide tailored solutions by producing specialized tractor-mounted<br />harvesters and importing leading global machinery, including BVL mixers,<br />Fliegl spreaders, Kemper headers, and Dondi ditchers and cultivators.<br /><br />KORION machinery is Korean-engineered for Asia’s fields.<br />We are your partner for world-class equipment optimized for local success.<br />",
+        "desc1": "KORION is a Korean agricultural machinery business based in South Korea’s <br />largest agricultural region, dedicated to meeting the unique needs <br />of Asian farmers.<br /><br />Our mission is simple: to help you achieve high-quality crops and less crop <br />loss using hyper-high quality machinery, always keeping safety in mind.<br /><br />Unlike many imported European models—which are typically optimized for vast, <br />large, flat fields—our R&D and manufacturing processes are centered on terrain<br /> adaptability and maneuverability specialized for Asia’s needs.<br /><br />We provide tailored solutions by producing specialized tractor-mounted <br />harvesters and importing leading global machinery, including BVL mixers, <br />Fliegl spreaders, Kemper headers, and Dondi ditchers and cultivators.<br /><br />KORION machinery is Korean-engineered for Asia’s fields. <br />We are your partner for world-class equipment optimized for local success.",
         "desc2": "",
         "contactBtn": "Contact Us"
     },
@@ -105,7 +105,7 @@
                     "features": [
                         "PTO shaft overdrive clutch",
                         "Uni Cracker",
-                        "alpha or beta version"
+                        "Alpha or Beta Version"
                     ]
                 }
             }
@@ -130,7 +130,7 @@
                     "features": [
                         "PTO shaft overdrive clutch",
                         "Uni Cracker",
-                        "alpha or beta version"
+                        "Alpha or Beta Version"
                     ]
                 }
             }
