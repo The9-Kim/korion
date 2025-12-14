@@ -21,7 +21,7 @@ export default function Contact() {
         >
           {/* Content Card */}
           <div className="relative z-10 bg-white/90 backdrop-blur-sm w-full rounded-tr-[40px] overflow-hidden shadow-xl md:mt-60 mt-24 my-4">
-            <div className="p-6 md:p-16 md:pt-20">
+            <div className="p-5 md:p-12 md:pt-16">
               <div className="mb-10">
                 <img src="/images/logo.png" alt="Korion" className="h-5 md:h-11 w-auto" />
               </div>
@@ -53,9 +53,9 @@ export default function Contact() {
                 </div>
               </div>
               <div className="mt-12 flex w-full justify-end opacity-15 ml-20 absolute">
-                <img src="/images/logo.png" alt="Korion" className="h-16 md:h-20 w-auto" />
+                <img src="/images/logo.png" alt="Korion" className="h-12 md:h-16 w-auto" />
               </div>
-              <div className="mt-6 lg:mt-40 relative">
+              <div className="mt-6 lg:mt-20 relative">
                 <div className="relative z-10 flex items-center justify-start md:gap-4 gap-2">
 
                   <div className="text-sm md:text-[25px] tracking-tighter font-gothic font-bold text-brand-navy whitespace-nowrap">
